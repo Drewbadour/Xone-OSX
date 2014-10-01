@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Xone_Driver_Pref_Pane">
+            <connections>
+                <outlet property="_window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+                <outlet property="a_img" destination="Czw-hk-hN5" id="YgX-UX-TfB"/>
+                <outlet property="b_img" destination="mSn-dw-ipo" id="od2-ve-cd4"/>
+                <outlet property="controller_combo" destination="lrT-Kw-GOh" id="WG8-mw-pSl"/>
+                <outlet property="down_img" destination="E5a-Uf-liV" id="i6T-hi-Sz2"/>
+                <outlet property="general_tab" destination="hxK-zZ-dnI" id="eGs-zO-HDS"/>
+                <outlet property="lb_img" destination="b7H-Bj-tp9" id="4Nb-uc-1Tg"/>
+                <outlet property="left_img" destination="s5L-6l-KKN" id="X4c-QP-1k1"/>
+                <outlet property="left_invert_x" destination="urh-Fo-Fcu" id="Bab-A9-6fz"/>
+                <outlet property="left_invert_y" destination="a9C-Jj-2M2" id="XRt-BZ-bHr"/>
+                <outlet property="left_stick_deadzone" destination="x0K-5I-EPI" id="sQp-Xd-pA9"/>
+                <outlet property="ls_img" destination="bnF-t5-Z0R" id="s2R-VX-aU9"/>
+                <outlet property="menu_img" destination="bdr-4O-Dyq" id="VC5-BQ-pIn"/>
+                <outlet property="my_view" destination="se5-gp-TjO" id="pPX-fu-mGl"/>
+                <outlet property="rb_img" destination="AUt-7d-Tpk" id="cAb-ya-SSX"/>
+                <outlet property="right_img" destination="VL9-EI-z4v" id="XoY-q8-UGC"/>
+                <outlet property="right_invert_x" destination="Od2-Vd-B0w" id="OvH-89-qBd"/>
+                <outlet property="right_invert_y" destination="hCj-e2-Wht" id="HIK-Aq-PbF"/>
+                <outlet property="right_stick_deadzone" destination="38x-Ov-Hg1" id="qQw-zx-A93"/>
+                <outlet property="rs_img" destination="7ST-8q-ryI" id="cha-3c-gMd"/>
+                <outlet property="trigger_deadzone" destination="MFF-HX-YiT" id="5zk-49-Vpx"/>
+                <outlet property="up_img" destination="2PX-hT-QqZ" id="0Yi-U8-jUX"/>
+                <outlet property="view" destination="se5-gp-TjO" id="g4r-t5-z7I"/>
+                <outlet property="view_img" destination="NVV-Y1-3OC" id="hrt-X0-hv3"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="A8R-9a-1iG"/>
+                <outlet property="x_img" destination="Ur4-DR-bhg" id="B9j-Zj-mKe"/>
+                <outlet property="y_img" destination="DWq-Ib-saS" id="aOL-OA-wQT"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Xbox One Controller" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5" userLabel="PrefPane">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="176" y="715" width="668" height="720"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <value key="minSize" type="size" width="960" height="720"/>
+            <value key="maxSize" type="size" width="960" height="720"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="668" height="720"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="coS-J4-HPV">
+                        <rect key="frame" x="13" y="10" width="642" height="704"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="General" identifier="1" id="hxK-zZ-dnI">
+                                <view key="view" ambiguous="YES" id="97O-MJ-gJa">
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="urh-Fo-Fcu">
+                                            <rect key="frame" x="7" y="-44" width="200" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Invert X-Axis" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="jQb-uJ-XE5">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="checkbox_clicked:" target="-2" id="kLw-D4-kVR"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9C-Jj-2M2">
+                                            <rect key="frame" x="7" y="-64" width="200" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Invert Y-Axis" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="GdH-jn-9Oz">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="checkbox_clicked:" target="-2" id="zU6-SV-bkf"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCj-e2-Wht">
+                                            <rect key="frame" x="415" y="-64" width="200" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Invert Y-Axis" bezelStyle="regularSquare" imagePosition="right" alignment="center" inset="2" id="Y0a-Es-tey">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="checkbox_clicked:" target="-2" id="PPE-LH-UBa"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUf-Ke-qRq">
+                                            <rect key="frame" x="211" y="-20" width="200" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="General" id="Fxs-GM-GcR">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmK-a8-OET">
+                                            <rect key="frame" x="7" y="-20" width="200" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Left Stick" id="0MO-NV-Yte">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sf7-E9-HkY">
+                                            <rect key="frame" x="415" y="-20" width="200" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Right Stick" id="APn-Lk-LYY">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0K-5I-EPI">
+                                            <rect key="frame" x="87" y="-92" width="118" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="7,849" drawsBackground="YES" id="vdz-il-PT5">
+                                                <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" id="aSa-9x-gbH">
+                                                    <real key="minimum" value="-32768"/>
+                                                    <real key="maximum" value="32767"/>
+                                                </numberFormatter>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38x-Ov-Hg1">
+                                            <rect key="frame" x="502" y="-92" width="118" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="8,689" drawsBackground="YES" id="IPb-NY-YoP">
+                                                <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" id="b1i-Th-UBo">
+                                                    <real key="minimum" value="-32768"/>
+                                                    <real key="maximum" value="32767"/>
+                                                </numberFormatter>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogw-SV-Xam">
+                                            <rect key="frame" x="424" y="-90" width="72" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Deadzone:" id="zfS-yr-B3o">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MFF-HX-YiT">
+                                            <rect key="frame" x="347" y="-46" width="62" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="120" drawsBackground="YES" id="4gj-F0-45J">
+                                                <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" id="UzK-X8-Ezr">
+                                                    <real key="minimum" value="0.0"/>
+                                                    <real key="maximum" value="1023"/>
+                                                </numberFormatter>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMn-EW-MxP">
+                                            <rect key="frame" x="220" y="-42" width="121" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Trigger Deadzone:" id="waQ-vF-ai1">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-NA-Xkh">
+                                            <rect key="frame" x="9" y="-90" width="72" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Deadzone:" id="AxJ-Bb-fff">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box autoresizesSubviews="NO" horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-rM-vej">
+                                            <rect key="frame" x="415" y="-99" width="5" height="96"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <box autoresizesSubviews="NO" horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="nzG-ts-SY8">
+                                            <rect key="frame" x="211" y="-99" width="5" height="96"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjW-a8-gll">
+                                            <rect key="frame" x="219" y="-99" width="196" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Reset Defaults" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="56F-2o-67a">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="reset_clicked:" target="-2" id="l7W-UK-IaA"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Od2-Vd-B0w">
+                                            <rect key="frame" x="415" y="-44" width="200" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Invert X-Axis" bezelStyle="regularSquare" imagePosition="right" alignment="center" inset="2" id="OiD-cn-oCd">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="checkbox_clicked:" target="-2" id="e0t-hN-Ere"/>
+                                            </connections>
+                                        </button>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ZT-75-I0q">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Back" id="ANA-gX-vYh"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnF-t5-Z0R">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_LS" id="rFp-cZ-OF8"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ST-8q-ryI">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_RS" id="3p8-VA-OEr"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Czw-hk-hN5">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_A" id="UF0-29-lIU"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mSn-dw-ipo">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_B" id="03b-uQ-7mH"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ur4-DR-bhg">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_X" id="78g-MK-2Jv"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DWq-Ib-saS">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Y" id="363-I7-vcS"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdr-4O-Dyq">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Menu" id="rNV-3L-IOO"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVV-Y1-3OC">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_View" id="u9Y-Jw-iDt"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7H-Bj-tp9">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_LB" id="jY1-DO-bCI"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUt-7d-Tpk">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_RB" id="Ktb-4Z-d1a"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PX-hT-QqZ">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Up" id="2pt-Rl-6EI"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5a-Uf-liV">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Down" id="yJI-U7-gmH"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5L-6l-KKN">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Left" id="OSh-2G-5Yk"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-EI-z4v">
+                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Right" id="8ZP-dE-HLo"/>
+                                        </imageView>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jwb-ig-hqs">
+                                            <rect key="frame" x="11" y="-226" width="76" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Controller: " id="der-by-az1">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrT-Kw-GOh">
+                                            <rect key="frame" x="87" y="-230" width="529" height="26"/>
+                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" id="UQx-j6-JiY">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </comboBoxCell>
+                                        </comboBox>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="general_tab" destination="hxK-zZ-dnI" id="QKT-Jb-SRM"/>
+                <outlet property="left_invert_x" destination="urh-Fo-Fcu" id="N9I-Zy-1Ks"/>
+                <outlet property="left_invert_y" destination="a9C-Jj-2M2" id="31R-t0-UPL"/>
+                <outlet property="left_stick_deadzone" destination="x0K-5I-EPI" id="ZCW-yj-r1N"/>
+                <outlet property="right_invert_x" destination="Od2-Vd-B0w" id="4kL-Tj-WqT"/>
+                <outlet property="right_invert_y" destination="hCj-e2-Wht" id="ATP-Zw-2E2"/>
+                <outlet property="right_stick_deadzone" destination="38x-Ov-Hg1" id="fbp-Cl-Hqd"/>
+                <outlet property="trigger_deadzone" destination="MFF-HX-YiT" id="T47-We-Wt4"/>
+            </connections>
+        </window>
+    </objects>
+    <resources>
+        <image name="Controller_A" width="1124" height="810"/>
+        <image name="Controller_B" width="1124" height="810"/>
+        <image name="Controller_Back" width="1124" height="810"/>
+        <image name="Controller_Down" width="1124" height="810"/>
+        <image name="Controller_LB" width="1124" height="810"/>
+        <image name="Controller_LS" width="1124" height="810"/>
+        <image name="Controller_Left" width="1124" height="810"/>
+        <image name="Controller_Menu" width="1124" height="810"/>
+        <image name="Controller_RB" width="1124" height="810"/>
+        <image name="Controller_RS" width="1124" height="810"/>
+        <image name="Controller_Right" width="1124" height="810"/>
+        <image name="Controller_Up" width="1124" height="810"/>
+        <image name="Controller_View" width="1124" height="810"/>
+        <image name="Controller_X" width="1124" height="810"/>
+        <image name="Controller_Y" width="1124" height="810"/>
+    </resources>
+</document>

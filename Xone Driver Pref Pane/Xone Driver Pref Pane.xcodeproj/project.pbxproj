@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6216F21A19D285F200161299 /* Xone_Driver_Pref_Pane.h in Headers */ = {isa = PBXBuildFile; fileRef = 6216F21919D285F200161299 /* Xone_Driver_Pref_Pane.h */; };
+		6216F21C19D285F200161299 /* Xone_Driver_Pref_Pane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6216F21B19D285F200161299 /* Xone_Driver_Pref_Pane.m */; };
+		6216F21E19D285F200161299 /* Xone_Driver_Pref_Pane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6216F21D19D285F200161299 /* Xone_Driver_Pref_Pane.tiff */; };
+		6216F22119D285F200161299 /* Xone_Driver_Pref_Pane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6216F21F19D285F200161299 /* Xone_Driver_Pref_Pane.xib */; };
+		62E8B2C719D4866900501CDB /* Controller_Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B2C619D4866900501CDB /* Controller_Back.png */; };
+		62E8B2C919D6381C00501CDB /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E8B2C819D6381C00501CDB /* PreferencePanes.framework */; };
+		62E8B2D919D7150000501CDB /* DDHidLib.framework in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B2D219D70D7D00501CDB /* DDHidLib.framework */; };
+		62E8B2DB19D7159700501CDB /* DDHidLib.framework in Copy Files to Frameworks */ = {isa = PBXBuildFile; fileRef = 62E8B2D219D70D7D00501CDB /* DDHidLib.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		62E8B2DC19D715B200501CDB /* DDHidLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E8B2D219D70D7D00501CDB /* DDHidLib.framework */; };
+		62E8B2DE19D75A7000501CDB /* Controller_LS.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B2DD19D75A7000501CDB /* Controller_LS.png */; };
+		62E8B2E019D7BE0500501CDB /* Controller_RS.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B2DF19D7BE0500501CDB /* Controller_RS.png */; };
+		62E8B2E219D7CA3200501CDB /* Controller_A.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B2E119D7CA3200501CDB /* Controller_A.png */; };
+		62E8B32119D903F900501CDB /* Controller_B.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31619D903F900501CDB /* Controller_B.png */; };
+		62E8B32219D903F900501CDB /* Controller_Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31719D903F900501CDB /* Controller_Down.png */; };
+		62E8B32319D903F900501CDB /* Controller_LB.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31819D903F900501CDB /* Controller_LB.png */; };
+		62E8B32419D903F900501CDB /* Controller_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31919D903F900501CDB /* Controller_Left.png */; };
+		62E8B32519D903F900501CDB /* Controller_Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31A19D903F900501CDB /* Controller_Menu.png */; };
+		62E8B32619D903F900501CDB /* Controller_RB.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31B19D903F900501CDB /* Controller_RB.png */; };
+		62E8B32719D903F900501CDB /* Controller_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31C19D903F900501CDB /* Controller_Right.png */; };
+		62E8B32819D903F900501CDB /* Controller_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31D19D903F900501CDB /* Controller_Up.png */; };
+		62E8B32919D903F900501CDB /* Controller_View.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31E19D903F900501CDB /* Controller_View.png */; };
+		62E8B32A19D903F900501CDB /* Controller_X.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B31F19D903F900501CDB /* Controller_X.png */; };
+		62E8B32B19D903F900501CDB /* Controller_Y.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B32019D903F900501CDB /* Controller_Y.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		62E8B2DA19D7157A00501CDB /* Copy Files to Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				62E8B2DB19D7159700501CDB /* DDHidLib.framework in Copy Files to Frameworks */,
+			);
+			name = "Copy Files to Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6216F21419D285F200161299 /* Xone Driver Pref Pane.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xone Driver Pref Pane.prefPane"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6216F21819D285F200161299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6216F21919D285F200161299 /* Xone_Driver_Pref_Pane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xone_Driver_Pref_Pane.h; sourceTree = "<group>"; };
+		6216F21B19D285F200161299 /* Xone_Driver_Pref_Pane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xone_Driver_Pref_Pane.m; sourceTree = "<group>"; };
+		6216F21D19D285F200161299 /* Xone_Driver_Pref_Pane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Xone_Driver_Pref_Pane.tiff; sourceTree = "<group>"; };
+		6216F22019D285F200161299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Xone_Driver_Pref_Pane.xib; sourceTree = "<group>"; };
+		62E8B2C619D4866900501CDB /* Controller_Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Back.png; sourceTree = "<group>"; };
+		62E8B2C819D6381C00501CDB /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		62E8B2D219D70D7D00501CDB /* DDHidLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DDHidLib.framework; sourceTree = "<group>"; };
+		62E8B2DD19D75A7000501CDB /* Controller_LS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_LS.png; sourceTree = "<group>"; };
+		62E8B2DF19D7BE0500501CDB /* Controller_RS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_RS.png; sourceTree = "<group>"; };
+		62E8B2E119D7CA3200501CDB /* Controller_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_A.png; sourceTree = "<group>"; };
+		62E8B31619D903F900501CDB /* Controller_B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_B.png; sourceTree = "<group>"; };
+		62E8B31719D903F900501CDB /* Controller_Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Down.png; sourceTree = "<group>"; };
+		62E8B31819D903F900501CDB /* Controller_LB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_LB.png; sourceTree = "<group>"; };
+		62E8B31919D903F900501CDB /* Controller_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Left.png; sourceTree = "<group>"; };
+		62E8B31A19D903F900501CDB /* Controller_Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Menu.png; sourceTree = "<group>"; };
+		62E8B31B19D903F900501CDB /* Controller_RB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_RB.png; sourceTree = "<group>"; };
+		62E8B31C19D903F900501CDB /* Controller_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Right.png; sourceTree = "<group>"; };
+		62E8B31D19D903F900501CDB /* Controller_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Up.png; sourceTree = "<group>"; };
+		62E8B31E19D903F900501CDB /* Controller_View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_View.png; sourceTree = "<group>"; };
+		62E8B31F19D903F900501CDB /* Controller_X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_X.png; sourceTree = "<group>"; };
+		62E8B32019D903F900501CDB /* Controller_Y.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Y.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6216F21019D285F200161299 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62E8B2C919D6381C00501CDB /* PreferencePanes.framework in Frameworks */,
+				62E8B2DC19D715B200501CDB /* DDHidLib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6216F20A19D285F200161299 = {
+			isa = PBXGroup;
+			children = (
+				62E8B2D219D70D7D00501CDB /* DDHidLib.framework */,
+				62E8B2C819D6381C00501CDB /* PreferencePanes.framework */,
+				6216F21619D285F200161299 /* Xone Driver Pref Pane */,
+				6216F21519D285F200161299 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6216F21519D285F200161299 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6216F21419D285F200161299 /* Xone Driver Pref Pane.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6216F21619D285F200161299 /* Xone Driver Pref Pane */ = {
+			isa = PBXGroup;
+			children = (
+				62E8B31519D9030300501CDB /* images */,
+				6216F21919D285F200161299 /* Xone_Driver_Pref_Pane.h */,
+				6216F21B19D285F200161299 /* Xone_Driver_Pref_Pane.m */,
+				6216F21D19D285F200161299 /* Xone_Driver_Pref_Pane.tiff */,
+				6216F21F19D285F200161299 /* Xone_Driver_Pref_Pane.xib */,
+				6216F21719D285F200161299 /* Supporting Files */,
+			);
+			path = "Xone Driver Pref Pane";
+			sourceTree = "<group>";
+		};
+		6216F21719D285F200161299 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6216F21819D285F200161299 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62E8B31519D9030300501CDB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				62E8B31619D903F900501CDB /* Controller_B.png */,
+				62E8B31719D903F900501CDB /* Controller_Down.png */,
+				62E8B31819D903F900501CDB /* Controller_LB.png */,
+				62E8B31919D903F900501CDB /* Controller_Left.png */,
+				62E8B31A19D903F900501CDB /* Controller_Menu.png */,
+				62E8B31B19D903F900501CDB /* Controller_RB.png */,
+				62E8B31C19D903F900501CDB /* Controller_Right.png */,
+				62E8B31D19D903F900501CDB /* Controller_Up.png */,
+				62E8B31E19D903F900501CDB /* Controller_View.png */,
+				62E8B31F19D903F900501CDB /* Controller_X.png */,
+				62E8B32019D903F900501CDB /* Controller_Y.png */,
+				62E8B2E119D7CA3200501CDB /* Controller_A.png */,
+				62E8B2DF19D7BE0500501CDB /* Controller_RS.png */,
+				62E8B2DD19D75A7000501CDB /* Controller_LS.png */,
+				62E8B2C619D4866900501CDB /* Controller_Back.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6216F21119D285F200161299 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6216F21A19D285F200161299 /* Xone_Driver_Pref_Pane.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6216F21319D285F200161299 /* Xone Driver Pref Pane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6216F22419D285F200161299 /* Build configuration list for PBXNativeTarget "Xone Driver Pref Pane" */;
+			buildPhases = (
+				6216F20F19D285F200161299 /* Sources */,
+				6216F21019D285F200161299 /* Frameworks */,
+				6216F21119D285F200161299 /* Headers */,
+				6216F21219D285F200161299 /* Resources */,
+				62E8B2DA19D7157A00501CDB /* Copy Files to Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Xone Driver Pref Pane";
+			productName = "Xone Driver Pref Pane";
+			productReference = 6216F21419D285F200161299 /* Xone Driver Pref Pane.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6216F20B19D285F200161299 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Vestigl Creations";
+				TargetAttributes = {
+					6216F21319D285F200161299 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 6216F20E19D285F200161299 /* Build configuration list for PBXProject "Xone Driver Pref Pane" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6216F20A19D285F200161299;
+			productRefGroup = 6216F21519D285F200161299 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6216F21319D285F200161299 /* Xone Driver Pref Pane */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6216F21219D285F200161299 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62E8B32119D903F900501CDB /* Controller_B.png in Resources */,
+				62E8B32319D903F900501CDB /* Controller_LB.png in Resources */,
+				62E8B2D919D7150000501CDB /* DDHidLib.framework in Resources */,
+				62E8B32619D903F900501CDB /* Controller_RB.png in Resources */,
+				62E8B32919D903F900501CDB /* Controller_View.png in Resources */,
+				6216F22119D285F200161299 /* Xone_Driver_Pref_Pane.xib in Resources */,
+				62E8B2DE19D75A7000501CDB /* Controller_LS.png in Resources */,
+				62E8B32419D903F900501CDB /* Controller_Left.png in Resources */,
+				62E8B2C719D4866900501CDB /* Controller_Back.png in Resources */,
+				62E8B2E019D7BE0500501CDB /* Controller_RS.png in Resources */,
+				62E8B32A19D903F900501CDB /* Controller_X.png in Resources */,
+				6216F21E19D285F200161299 /* Xone_Driver_Pref_Pane.tiff in Resources */,
+				62E8B32719D903F900501CDB /* Controller_Right.png in Resources */,
+				62E8B32B19D903F900501CDB /* Controller_Y.png in Resources */,
+				62E8B2E219D7CA3200501CDB /* Controller_A.png in Resources */,
+				62E8B32519D903F900501CDB /* Controller_Menu.png in Resources */,
+				62E8B32219D903F900501CDB /* Controller_Down.png in Resources */,
+				62E8B32819D903F900501CDB /* Controller_Up.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6216F20F19D285F200161299 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6216F21C19D285F200161299 /* Xone_Driver_Pref_Pane.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6216F21F19D285F200161299 /* Xone_Driver_Pref_Pane.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6216F22019D285F200161299 /* Base */,
+			);
+			name = Xone_Driver_Pref_Pane.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6216F22219D285F200161299 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6216F22319D285F200161299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6216F22519D285F200161299 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Xone Driver Pref Pane/Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		6216F22619D285F200161299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Xone Driver Pref Pane/Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6216F20E19D285F200161299 /* Build configuration list for PBXProject "Xone Driver Pref Pane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6216F22219D285F200161299 /* Debug */,
+				6216F22319D285F200161299 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6216F22419D285F200161299 /* Build configuration list for PBXNativeTarget "Xone Driver Pref Pane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6216F22519D285F200161299 /* Debug */,
+				6216F22619D285F200161299 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6216F20B19D285F200161299 /* Project object */;
+}

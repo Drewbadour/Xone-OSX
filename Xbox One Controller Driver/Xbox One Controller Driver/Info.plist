@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.vestigl.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>MicrosoftXboxOneController</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.vestigl.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>IOClass</key>
+			<string>com_vestigl_driver_Xone_Driver</string>
+			<key>IOKitDebug</key>
+			<integer>0</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBDevice</string>
+			<key>IOMatchCategory</key>
+			<string>com_vestigl_driver_Xone_Driver</string>
+			<key>idProduct</key>
+			<integer>721</integer>
+			<key>idVendor</key>
+			<integer>1118</integer>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2014 Vestigl. All rights reserved.</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOHIDFamily</key>
+		<string>2.0</string>
+		<key>com.apple.iokit.IOUSBFamily</key>
+		<string>683.4</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>13.3</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>13.3</string>
+		<key>com.apple.kpi.mach</key>
+		<string>13.3</string>
+	</dict>
+</dict>
+</plist>

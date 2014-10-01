@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62157DA719D07DB100240AAD /* xonehid.h in Headers */ = {isa = PBXBuildFile; fileRef = 62157DA619D07DB100240AAD /* xonehid.h */; };
+		62176B7119D0B717001A415B /* Data Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 62176B7019D0B717001A415B /* Data Notes.rtf */; };
+		624D66DC19C95EE200D01105 /* Xone_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 624D66DB19C95EE200D01105 /* Xone_Controller.cpp */; };
+		62788F6819C37D09000435ED /* Xone_Driver.h in Headers */ = {isa = PBXBuildFile; fileRef = 62788F6719C37D09000435ED /* Xone_Driver.h */; };
+		62788F6A19C37D09000435ED /* Xone_Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62788F6919C37D09000435ED /* Xone_Driver.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		62157DA619D07DB100240AAD /* xonehid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xonehid.h; sourceTree = "<group>"; };
+		62176B7019D0B717001A415B /* Data Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Data Notes.rtf"; sourceTree = "<group>"; };
+		624D66DA19C95D7900D01105 /* Xone_Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xone_Controller.h; sourceTree = "<group>"; };
+		624D66DB19C95EE200D01105 /* Xone_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Xone_Controller.cpp; sourceTree = "<group>"; };
+		624D66DD19C9EEC600D01105 /* ControlStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlStruct.h; sourceTree = "<group>"; };
+		62788F6219C37D09000435ED /* Xone Driver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xone Driver.kext"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62788F6619C37D09000435ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62788F6719C37D09000435ED /* Xone_Driver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xone_Driver.h; sourceTree = "<group>"; };
+		62788F6919C37D09000435ED /* Xone_Driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Xone_Driver.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62788F5E19C37D09000435ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6216A91519DB13A900687AEB /* Xone_Controller */ = {
+			isa = PBXGroup;
+			children = (
+				624D66DA19C95D7900D01105 /* Xone_Controller.h */,
+				624D66DB19C95EE200D01105 /* Xone_Controller.cpp */,
+				62157DA619D07DB100240AAD /* xonehid.h */,
+			);
+			name = Xone_Controller;
+			sourceTree = "<group>";
+		};
+		62788F5819C37D09000435ED = {
+			isa = PBXGroup;
+			children = (
+				62788F6419C37D09000435ED /* Xone Driver */,
+				62788F6319C37D09000435ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62788F6319C37D09000435ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62788F6219C37D09000435ED /* Xone Driver.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62788F6419C37D09000435ED /* Xone Driver */ = {
+			isa = PBXGroup;
+			children = (
+				6216A91519DB13A900687AEB /* Xone_Controller */,
+				62788F6719C37D09000435ED /* Xone_Driver.h */,
+				62788F6919C37D09000435ED /* Xone_Driver.cpp */,
+				624D66DD19C9EEC600D01105 /* ControlStruct.h */,
+				62788F6519C37D09000435ED /* Supporting Files */,
+				62176B7019D0B717001A415B /* Data Notes.rtf */,
+			);
+			name = "Xone Driver";
+			path = "Xbox One Controller Driver";
+			sourceTree = "<group>";
+		};
+		62788F6519C37D09000435ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62788F6619C37D09000435ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		62788F5F19C37D09000435ED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62157DA719D07DB100240AAD /* xonehid.h in Headers */,
+				62788F6819C37D09000435ED /* Xone_Driver.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		62788F6119C37D09000435ED /* Xone Driver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62788F6D19C37D09000435ED /* Build configuration list for PBXNativeTarget "Xone Driver" */;
+			buildPhases = (
+				62788F5D19C37D09000435ED /* Sources */,
+				62788F5E19C37D09000435ED /* Frameworks */,
+				62788F5F19C37D09000435ED /* Headers */,
+				62788F6019C37D09000435ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Xone Driver";
+			productName = "Xbox One Controller Driver";
+			productReference = 62788F6219C37D09000435ED /* Xone Driver.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62788F5919C37D09000435ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Vestigl;
+				TargetAttributes = {
+					62788F6119C37D09000435ED = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 62788F5C19C37D09000435ED /* Build configuration list for PBXProject "Xone Driver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 62788F5819C37D09000435ED;
+			productRefGroup = 62788F6319C37D09000435ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62788F6119C37D09000435ED /* Xone Driver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62788F6019C37D09000435ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62176B7119D0B717001A415B /* Data Notes.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62788F5D19C37D09000435ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62788F6A19C37D09000435ED /* Xone_Driver.cpp in Sources */,
+				624D66DC19C95EE200D01105 /* Xone_Controller.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		62788F6B19C37D09000435ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		62788F6C19C37D09000435ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		62788F6E19C37D09000435ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = "Xbox One Controller Driver/Info.plist";
+				MODULE_NAME = com.vestigl.Xbox_One_Controller_Driver;
+				MODULE_VERSION = 1.0.0d1;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Xone Driver";
+				SDKROOT = macosx10.9;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		62788F6F19C37D09000435ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = "Xbox One Controller Driver/Info.plist";
+				MODULE_NAME = com.vestigl.Xbox_One_Controller_Driver;
+				MODULE_VERSION = 1.0.0d1;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Xone Driver";
+				SDKROOT = macosx10.9;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62788F5C19C37D09000435ED /* Build configuration list for PBXProject "Xone Driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62788F6B19C37D09000435ED /* Debug */,
+				62788F6C19C37D09000435ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62788F6D19C37D09000435ED /* Build configuration list for PBXNativeTarget "Xone Driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62788F6E19C37D09000435ED /* Debug */,
+				62788F6F19C37D09000435ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62788F5919C37D09000435ED /* Project object */;
+}
