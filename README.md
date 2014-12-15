@@ -5,6 +5,7 @@ Xone-OSX
 
 ### This is an unsigned, beta release. Use at your own discretion.
 
+<<<<<<< HEAD
 **NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!SsJFSSxR!8eyrbuTR9FxIRH0G4q-ZzOSJfVQDzi-9InnL7EbPjWc).**
 
 ## Installation
@@ -22,6 +23,10 @@ Xone-OSX
 I don't recommend leaving batteries in the controller while using it wired for extended periods of time. This could potentially cause wear on the batteries that is best avoided.
 
 #### Install on OS X 10.9 or earlier
+=======
+~~**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!DgpAhZxT!4jLE6xXmeQQekeRwvItyUUW4Ku3E6F5jRAT_kmkaPMI).**~~
+**The installer is currently broken. The only way to use it currently is to follow these steps:**
+>>>>>>> FETCH_HEAD
  - Download the project.
  - Build the "Xbox One Controller Driver" project.
  - Copy the product into the "/tmp" folder
