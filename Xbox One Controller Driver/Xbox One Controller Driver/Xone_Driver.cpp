@@ -146,7 +146,7 @@ bool com_vestigl_driver_Xone_Driver::start(IOService* provider)
         }
     }
     
-    if (xone_device->SetConfiguration(this, cd->bConfigurationValue != kIOReturnSuccess))
+    if (xone_device->SetConfiguration(this, cd->bConfigurationValue) != kIOReturnSuccess)
     {
         release_all();
         return false;

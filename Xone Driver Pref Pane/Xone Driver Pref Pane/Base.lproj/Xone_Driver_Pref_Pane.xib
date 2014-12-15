@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="Xone_Driver_Pref_Pane">
@@ -12,12 +13,15 @@
                 <outlet property="controller_combo" destination="lrT-Kw-GOh" id="WG8-mw-pSl"/>
                 <outlet property="down_img" destination="E5a-Uf-liV" id="i6T-hi-Sz2"/>
                 <outlet property="general_tab" destination="hxK-zZ-dnI" id="eGs-zO-HDS"/>
+                <outlet property="guide_img" destination="rFI-4F-PYg" id="5W6-fU-Kzm"/>
                 <outlet property="lb_img" destination="b7H-Bj-tp9" id="4Nb-uc-1Tg"/>
                 <outlet property="left_img" destination="s5L-6l-KKN" id="X4c-QP-1k1"/>
                 <outlet property="left_invert_x" destination="urh-Fo-Fcu" id="Bab-A9-6fz"/>
                 <outlet property="left_invert_y" destination="a9C-Jj-2M2" id="XRt-BZ-bHr"/>
                 <outlet property="left_stick_deadzone" destination="x0K-5I-EPI" id="sQp-Xd-pA9"/>
-                <outlet property="ls_img" destination="bnF-t5-Z0R" id="s2R-VX-aU9"/>
+                <outlet property="ls_img" destination="gnd-CM-6nX" id="pul-6I-ep0"/>
+                <outlet property="lsc_img" destination="t6b-VW-4gk" id="Hms-QX-FI1"/>
+                <outlet property="lt_img" destination="Fue-tv-5px" id="fhF-na-dUL"/>
                 <outlet property="menu_img" destination="bdr-4O-Dyq" id="VC5-BQ-pIn"/>
                 <outlet property="my_view" destination="se5-gp-TjO" id="pPX-fu-mGl"/>
                 <outlet property="rb_img" destination="AUt-7d-Tpk" id="cAb-ya-SSX"/>
@@ -25,7 +29,9 @@
                 <outlet property="right_invert_x" destination="Od2-Vd-B0w" id="OvH-89-qBd"/>
                 <outlet property="right_invert_y" destination="hCj-e2-Wht" id="HIK-Aq-PbF"/>
                 <outlet property="right_stick_deadzone" destination="38x-Ov-Hg1" id="qQw-zx-A93"/>
-                <outlet property="rs_img" destination="7ST-8q-ryI" id="cha-3c-gMd"/>
+                <outlet property="rs_img" destination="ooI-JB-zpd" id="khh-iC-xIF"/>
+                <outlet property="rsc_img" destination="0qk-be-DhO" id="oXk-yk-Hzz"/>
+                <outlet property="rt_img" destination="avK-g4-gce" id="dI7-DD-iUV"/>
                 <outlet property="trigger_deadzone" destination="MFF-HX-YiT" id="5zk-49-Vpx"/>
                 <outlet property="up_img" destination="2PX-hT-QqZ" id="0Yi-U8-jUX"/>
                 <outlet property="view" destination="se5-gp-TjO" id="g4r-t5-z7I"/>
@@ -40,7 +46,7 @@
         <window title="Xbox One Controller" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5" userLabel="PrefPane">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="176" y="715" width="668" height="720"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <value key="minSize" type="size" width="960" height="720"/>
             <value key="maxSize" type="size" width="960" height="720"/>
             <view key="contentView" id="se5-gp-TjO">
@@ -169,13 +175,13 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <box autoresizesSubviews="NO" horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-rM-vej">
+                                        <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-rM-vej">
                                             <rect key="frame" x="415" y="-99" width="5" height="96"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <box autoresizesSubviews="NO" horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="nzG-ts-SY8">
+                                        <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="nzG-ts-SY8">
                                             <rect key="frame" x="211" y="-99" width="5" height="96"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -202,67 +208,87 @@
                                             </connections>
                                         </button>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ZT-75-I0q">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Back" id="ANA-gX-vYh"/>
                                         </imageView>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnF-t5-Z0R">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_LS" id="rFp-cZ-OF8"/>
-                                        </imageView>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ST-8q-ryI">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_RS" id="3p8-VA-OEr"/>
-                                        </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Czw-hk-hN5">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_A" id="UF0-29-lIU"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mSn-dw-ipo">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_B" id="03b-uQ-7mH"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ur4-DR-bhg">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_X" id="78g-MK-2Jv"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DWq-Ib-saS">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Y" id="363-I7-vcS"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdr-4O-Dyq">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Menu" id="rNV-3L-IOO"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVV-Y1-3OC">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_View" id="u9Y-Jw-iDt"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7H-Bj-tp9">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_LB" id="jY1-DO-bCI"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUt-7d-Tpk">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_RB" id="Ktb-4Z-d1a"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PX-hT-QqZ">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Up" id="2pt-Rl-6EI"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5a-Uf-liV">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Down" id="yJI-U7-gmH"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5L-6l-KKN">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Left" id="OSh-2G-5Yk"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-EI-z4v">
-                                            <rect key="frame" x="-139" y="-980" width="901" height="771"/>
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Right" id="8ZP-dE-HLo"/>
                                         </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFI-4F-PYg">
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_Guide" id="kYj-65-Wb9"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnd-CM-6nX">
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_LS" id="K0X-oe-Pev"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ooI-JB-zpd">
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_RS" id="So8-4S-Mir"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t6b-VW-4gk">
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_LSC" id="Yzh-8N-oH7"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qk-be-DhO">
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_RSC" id="j7r-0c-TC7"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fue-tv-5px">
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_LT" id="L2r-Sa-ZEQ"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avK-g4-gce">
+                                            <rect key="frame" x="-139" y="-780" width="901" height="771"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Controller_RT" id="cHf-GS-LpY"/>
+                                        </imageView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jwb-ig-hqs">
-                                            <rect key="frame" x="11" y="-226" width="76" height="17"/>
+                                            <rect key="frame" x="11" y="-126" width="76" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Controller: " id="der-by-az1">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -270,13 +296,23 @@
                                             </textFieldCell>
                                         </textField>
                                         <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrT-Kw-GOh">
-                                            <rect key="frame" x="87" y="-230" width="529" height="26"/>
+                                            <rect key="frame" x="87" y="-130" width="445" height="26"/>
                                             <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" id="UQx-j6-JiY">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </comboBoxCell>
                                         </comboBox>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9FF-El-Pgj">
+                                            <rect key="frame" x="540" y="-134" width="76" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vhj-eY-kXZ">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="refresh:" target="-2" id="tMv-Z2-GDq"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -297,20 +333,25 @@
         </window>
     </objects>
     <resources>
-        <image name="Controller_A" width="1124" height="810"/>
-        <image name="Controller_B" width="1124" height="810"/>
-        <image name="Controller_Back" width="1124" height="810"/>
-        <image name="Controller_Down" width="1124" height="810"/>
-        <image name="Controller_LB" width="1124" height="810"/>
-        <image name="Controller_LS" width="1124" height="810"/>
-        <image name="Controller_Left" width="1124" height="810"/>
-        <image name="Controller_Menu" width="1124" height="810"/>
-        <image name="Controller_RB" width="1124" height="810"/>
-        <image name="Controller_RS" width="1124" height="810"/>
-        <image name="Controller_Right" width="1124" height="810"/>
-        <image name="Controller_Up" width="1124" height="810"/>
-        <image name="Controller_View" width="1124" height="810"/>
-        <image name="Controller_X" width="1124" height="810"/>
-        <image name="Controller_Y" width="1124" height="810"/>
+        <image name="Controller_A" width="620" height="530"/>
+        <image name="Controller_B" width="620" height="530"/>
+        <image name="Controller_Back" width="620" height="530"/>
+        <image name="Controller_Down" width="620" height="530"/>
+        <image name="Controller_Guide" width="620" height="530"/>
+        <image name="Controller_LB" width="620" height="530"/>
+        <image name="Controller_LS" width="620" height="530"/>
+        <image name="Controller_LSC" width="620" height="530"/>
+        <image name="Controller_LT" width="620" height="530"/>
+        <image name="Controller_Left" width="620" height="530"/>
+        <image name="Controller_Menu" width="620" height="530"/>
+        <image name="Controller_RB" width="620" height="530"/>
+        <image name="Controller_RS" width="620" height="530"/>
+        <image name="Controller_RSC" width="620" height="530"/>
+        <image name="Controller_RT" width="620" height="530"/>
+        <image name="Controller_Right" width="620" height="530"/>
+        <image name="Controller_Up" width="620" height="530"/>
+        <image name="Controller_View" width="620" height="530"/>
+        <image name="Controller_X" width="620" height="530"/>
+        <image name="Controller_Y" width="620" height="530"/>
     </resources>
 </document>

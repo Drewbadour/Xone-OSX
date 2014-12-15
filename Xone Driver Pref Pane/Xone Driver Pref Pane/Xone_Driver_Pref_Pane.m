@@ -57,19 +57,19 @@ NSString* const invert_y_str = @"Invert Y-Axis";
         max_trigger = [NSNumber numberWithInt:1023];
         min_trigger = [NSNumber numberWithInt:0];
         
-        joysticks = [NSMutableArray arrayWithArray:[DDHidJoystick allJoysticks]];
-        for (long i = [joysticks count] - 1; i >= 0; i--)
-        {
-            if ([joysticks[i] productId] != 721)
-                [joysticks removeObjectAtIndex:i];
-            else if ([joysticks[i] vendorId] != 1118)
-                [joysticks removeObjectAtIndex:i];
-        }
+//        joysticks = [NSMutableArray arrayWithArray:[DDHidJoystick allJoysticks]];
+//        for (long i = [joysticks count] - 1; i >= 0; i--)
+//        {
+//            if ([joysticks[i] productId] != 721)
+//                [joysticks removeObjectAtIndex:i];
+//            else if ([joysticks[i] vendorId] != 1118)
+//                [joysticks removeObjectAtIndex:i];
+//        }
+//        
+//        [joysticks makeObjectsPerformSelector:@selector(setDelegate:) withObject:self];
+//        [joysticks makeObjectsPerformSelector:@selector(startListening) withObject:nil];
         
-        [joysticks makeObjectsPerformSelector:@selector(setDelegate:) withObject:self];
-        [joysticks makeObjectsPerformSelector:@selector(startListening) withObject:nil];
-        
-        img_pos = NSMakeRect(-139, -322, 901, 771);
+        img_pos = NSMakeRect(-139, -122, 901, 771);
     }
     
     return self;
@@ -85,6 +85,28 @@ NSString* const invert_y_str = @"Invert Y-Axis";
     [self loadStringValue:CFSTR("left_deadzone") forTextField:left_stick_deadzone withDefault:[NSString stringWithFormat:@"%i", left_stick_deadzone_default]];
     [self loadStringValue:CFSTR("right_deadzone") forTextField:right_stick_deadzone withDefault:[NSString stringWithFormat:@"%i", right_stick_deadzone_default]];
     [self loadStringValue:CFSTR("trigger_deadzone") forTextField:trigger_deadzone withDefault:[NSString stringWithFormat:@"%i", trigger_deadzone_default]];
+    
+    [self refresh:0];
+//    for (int i = 0; i < [joysticks count]; i++)
+//        [controller_combo addItemWithObjectValue:[NSString stringWithFormat:@"Controller %d", i + 1]];
+//    [controller_combo setNumberOfVisibleItems:[joysticks count]];
+//    if ([joysticks count] > 0)
+//        [controller_combo selectItemAtIndex:0];
+}
+
+- (IBAction)refresh:(id)sender
+{
+    joysticks = [NSMutableArray arrayWithArray:[DDHidJoystick allJoysticks]];
+    for (long i = [joysticks count] - 1; i >= 0; i--)
+    {
+        if ([joysticks[i] productId] != 721)
+            [joysticks removeObjectAtIndex:i];
+        else if ([joysticks[i] vendorId] != 1118)
+            [joysticks removeObjectAtIndex:i];
+    }
+    
+    [joysticks makeObjectsPerformSelector:@selector(setDelegate:) withObject:self];
+    [joysticks makeObjectsPerformSelector:@selector(startListening) withObject:nil];
     
     for (int i = 0; i < [joysticks count]; i++)
         [controller_combo addItemWithObjectValue:[NSString stringWithFormat:@"Controller %d", i + 1]];
@@ -265,13 +287,13 @@ NSString* const invert_y_str = @"Invert Y-Axis";
                 [menu_img setHidden:NO];
                 break;
             case 8:
-                // Left stick click no image
+                [lsc_img setHidden:NO];
                 break;
             case 9:
-                // Right stick click no image
+                [rsc_img setHidden:NO];
                 break;
             case 10:
-                // Guide button no image
+                [guide_img setHidden:NO];
                 break;
             case 11:
                 // Sync button no image
@@ -325,13 +347,13 @@ NSString* const invert_y_str = @"Invert Y-Axis";
                 [menu_img setHidden:YES];
                 break;
             case 8:
-                // Left stick click no image
+                [lsc_img setHidden:YES];
                 break;
             case 9:
-                // Right stick click no image
+                [rsc_img setHidden:YES];
                 break;
             case 10:
-                // Guide button no image
+                [guide_img setHidden:YES];
                 break;
             case 11:
                 // Sync button no image
@@ -361,7 +383,7 @@ NSString* const invert_y_str = @"Invert Y-Axis";
         if(abs(value) > [left_stick_deadzone intValue])
         {
             // Left Stick Light
-            double offset = 20 * value / [max_stick intValue];
+            double offset = 11 * value / [max_stick intValue];
             if ([left_invert_x state])
                 offset = -offset;
             [ls_img setFrame:NSMakeRect(img_pos.origin.x + offset, [ls_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
@@ -380,7 +402,7 @@ NSString* const invert_y_str = @"Invert Y-Axis";
         if(abs(value) > [left_stick_deadzone intValue])
         {
             // Left Stick Light
-            double offset = 20 * value / [max_stick intValue];
+            double offset = 11 * value / [max_stick intValue];
             if (![left_invert_y state])
                 offset = -offset;
             [ls_img setFrame:NSMakeRect([ls_img frame].origin.x, img_pos.origin.y + offset, img_pos.size.width, img_pos.size.height)];
@@ -397,12 +419,36 @@ NSString* const invert_y_str = @"Invert Y-Axis";
     // Axes 0 = LT, 1 = RT, 2 = Right Stick X, 3 = R Stick Y
     if ([joystick locationId] == [joysticks[[controller_combo indexOfSelectedItem]] locationId])
     {
+        if (otherAxis == 0)
+        {
+            if(value > [trigger_deadzone intValue])
+            {
+                // Left Trigger Light
+                [lt_img setHidden:NO];
+            }
+            else
+            {
+                [lt_img setHidden:YES];
+            }
+        }
+        if (otherAxis == 1)
+        {
+            if(value > [trigger_deadzone intValue])
+            {
+                // Right Trigger Light
+                [rt_img setHidden:NO];
+            }
+            else
+            {
+                [rt_img setHidden:YES];
+            }
+        }
         if (otherAxis == 2)
         {
             if(abs(value) > [right_stick_deadzone intValue])
             {
                 // Right Stick Light
-                double offset = 20 * value / [max_stick intValue];
+                double offset = 11 * value / [max_stick intValue];
                 if ([right_invert_x state])
                     offset = -offset;
                 [rs_img setFrame:NSMakeRect(img_pos.origin.x + offset, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
@@ -417,7 +463,7 @@ NSString* const invert_y_str = @"Invert Y-Axis";
             if(abs(value) > [right_stick_deadzone intValue])
             {
                 // Right Stick Light
-                double offset = 20 * value / [max_stick intValue];
+                double offset = 11 * value / [max_stick intValue];
                 if (![right_invert_y state])
                     offset = -offset;
                 [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y + offset, img_pos.size.width, img_pos.size.height)];

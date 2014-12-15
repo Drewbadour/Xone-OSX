@@ -1,4 +1,4 @@
-<pkmkdoc spec="1.12"><properties><title>Xone Driver</title><organization>com.vestigl</organization><userSees ui="both"/><min-target os="3"/><domain system="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><contents><choice title="Xone Driver Pref Pane" id="choice3" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="com.vestigl.xoneDriver.XoneDriverPrefPane.pkg"/></choice><choice title="Xone Driver" id="choice4" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="com.vestigl.xoneDriver.XoneDriver.pkg"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource mime-type="text/rtf" kind="embedded" type="license"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+<pkmkdoc spec="1.12"><properties><title>Xone Driver</title><build>/Users/drewmills/Dropbox/Work/Vestigial Creations/Xbox One Driver/git/Xone-OSX/Xone Driver Installer.pkg</build><organization>com.vestigl</organization><userSees ui="easy"/><min-target os="3"/><domain system="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><contents><choice title="Xone Driver Pref Pane" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="com.vestigl.xoneDriver.XoneDriverPrefPane.pkg"/></choice><choice title="Xone Driver" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="com.vestigl.xoneDriver.XoneDriver.pkg"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource mime-type="text/rtf" kind="embedded" type="license"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
 {\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red26\green26\blue26;\red13\green0\blue93;
 }
@@ -186,7 +186,7 @@ signature of Ty Coon, 1 April 1989\
 Ty Coon, President of Vice\
 \pard\pardeftab720\sl400\sa320
 
-\f0\fs32 \cf0 This General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the {\field{\*\fldinst{HYPERLINK "http://www.gnu.org/licenses/lgpl.html"}}{\fldrslt \cf4 \ul \ulc4 GNU Lesser General Public License}} instead of this License.}]]></resource><resource mime-type="text/rtf" kind="embedded" type="readme"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+\f0\fs32 \cf0 This General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the {\field{\*\fldinst{HYPERLINK "http://www.gnu.org/licenses/lgpl.html"}}{\fldrslt \cf4 \ul \ulc4 GNU Lesser General Public License}} instead of this License.}]]></resource><resource mime-type="text/rtf" kind="embedded" type="readme"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
@@ -201,7 +201,7 @@ Copyright (C) 2014 Drew Mills\
 
 \b \cf0 About
 \b0 \
-This driver supports the Microsoft Xbox One controllerfor the Mac OS X platform. It includes a Preference Pane with which allows you to test everything is installed correctly.\
+This driver supports the Microsoft Xbox One controller for the Mac OS X platform. It includes a Preference Pane with which allows you to test everything is installed correctly.\
 \
 
 \b Licence
@@ -219,7 +219,7 @@ Contact me
 \ls1\ilvl0
 \b \cf0 Developer info
 \b0 \
-Anything below this probably doesn't affect end users, so you can stop reading now if you just want to use the driver.}]]></resource><resource mime-type="text/rtf" kind="embedded" type="welcome"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+Anything below this probably doesn't affect end users, so you can stop reading now if you just want to use the driver.}]]></resource><resource mime-type="text/rtf" kind="embedded" type="welcome"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
@@ -227,9 +227,9 @@ Anything below this probably doesn't affect end users, so you can stop reading n
 \f0\b\fs36 \cf0 Xbox One Controller Driver for Mac OS X
 \b0\fs24 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
-\cf0 Version 0.1\
+\cf0 Version 0.2\
 Copyright (C) 2014 Drew Mills\
 \
 Welcome to the installer for the Xbox One Controller driver for Mac OS X.\
 \
-This is a beta driver. Use with caution.}]]></resource></locale></resources><flags/><item type="file">01xone.xml</item><item type="file">02xone.xml</item><mod>properties.title</mod><mod>properties.anywhereDomain</mod><mod>properties.systemDomain</mod></pkmkdoc>
+This is a beta driver. Use with caution.}]]></resource></locale></resources><flags/><item type="file">01xone.xml</item><item type="file">02xone.xml</item><mod>properties.title</mod><mod>properties.customizeOption</mod><mod>properties.anywhereDomain</mod><mod>properties.systemDomain</mod></pkmkdoc>

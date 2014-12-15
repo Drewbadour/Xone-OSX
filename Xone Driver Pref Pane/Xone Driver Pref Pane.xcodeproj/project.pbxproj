@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		6216F21A19D285F200161299 /* Xone_Driver_Pref_Pane.h in Headers */ = {isa = PBXBuildFile; fileRef = 6216F21919D285F200161299 /* Xone_Driver_Pref_Pane.h */; };
 		6216F21C19D285F200161299 /* Xone_Driver_Pref_Pane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6216F21B19D285F200161299 /* Xone_Driver_Pref_Pane.m */; };
-		6216F21E19D285F200161299 /* Xone_Driver_Pref_Pane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6216F21D19D285F200161299 /* Xone_Driver_Pref_Pane.tiff */; };
-		6216F22119D285F200161299 /* Xone_Driver_Pref_Pane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6216F21F19D285F200161299 /* Xone_Driver_Pref_Pane.xib */; };
+		622AB5631A3E6135008A053A /* Xone_Driver_Pref_Pane.icns in Resources */ = {isa = PBXBuildFile; fileRef = 622AB5621A3E6135008A053A /* Xone_Driver_Pref_Pane.icns */; };
+		62E231131A3E151A009C0D5B /* Xone_Driver_Pref_Pane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62E231111A3E151A009C0D5B /* Xone_Driver_Pref_Pane.xib */; };
+		62E231151A3E1723009C0D5B /* Controller_Guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E231141A3E1723009C0D5B /* Controller_Guide.png */; };
+		62E231171A3E173D009C0D5B /* Controller_LSC.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E231161A3E173D009C0D5B /* Controller_LSC.png */; };
+		62E231191A3E174D009C0D5B /* Controller_LT.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E231181A3E174D009C0D5B /* Controller_LT.png */; };
+		62E2311B1A3E175D009C0D5B /* Controller_RSC.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E2311A1A3E175D009C0D5B /* Controller_RSC.png */; };
+		62E2311D1A3E1767009C0D5B /* Controller_RT.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E2311C1A3E1767009C0D5B /* Controller_RT.png */; };
 		62E8B2C719D4866900501CDB /* Controller_Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B2C619D4866900501CDB /* Controller_Back.png */; };
 		62E8B2C919D6381C00501CDB /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E8B2C819D6381C00501CDB /* PreferencePanes.framework */; };
 		62E8B2D919D7150000501CDB /* DDHidLib.framework in Resources */ = {isa = PBXBuildFile; fileRef = 62E8B2D219D70D7D00501CDB /* DDHidLib.framework */; };
@@ -51,8 +56,13 @@
 		6216F21819D285F200161299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6216F21919D285F200161299 /* Xone_Driver_Pref_Pane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xone_Driver_Pref_Pane.h; sourceTree = "<group>"; };
 		6216F21B19D285F200161299 /* Xone_Driver_Pref_Pane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xone_Driver_Pref_Pane.m; sourceTree = "<group>"; };
-		6216F21D19D285F200161299 /* Xone_Driver_Pref_Pane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Xone_Driver_Pref_Pane.tiff; sourceTree = "<group>"; };
-		6216F22019D285F200161299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Xone_Driver_Pref_Pane.xib; sourceTree = "<group>"; };
+		622AB5621A3E6135008A053A /* Xone_Driver_Pref_Pane.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Xone_Driver_Pref_Pane.icns; sourceTree = "<group>"; };
+		62E231121A3E151A009C0D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Xone_Driver_Pref_Pane.xib; sourceTree = "<group>"; };
+		62E231141A3E1723009C0D5B /* Controller_Guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Guide.png; sourceTree = "<group>"; };
+		62E231161A3E173D009C0D5B /* Controller_LSC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_LSC.png; sourceTree = "<group>"; };
+		62E231181A3E174D009C0D5B /* Controller_LT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_LT.png; sourceTree = "<group>"; };
+		62E2311A1A3E175D009C0D5B /* Controller_RSC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_RSC.png; sourceTree = "<group>"; };
+		62E2311C1A3E1767009C0D5B /* Controller_RT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_RT.png; sourceTree = "<group>"; };
 		62E8B2C619D4866900501CDB /* Controller_Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Controller_Back.png; sourceTree = "<group>"; };
 		62E8B2C819D6381C00501CDB /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		62E8B2D219D70D7D00501CDB /* DDHidLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DDHidLib.framework; sourceTree = "<group>"; };
@@ -109,8 +119,8 @@
 				62E8B31519D9030300501CDB /* images */,
 				6216F21919D285F200161299 /* Xone_Driver_Pref_Pane.h */,
 				6216F21B19D285F200161299 /* Xone_Driver_Pref_Pane.m */,
-				6216F21D19D285F200161299 /* Xone_Driver_Pref_Pane.tiff */,
-				6216F21F19D285F200161299 /* Xone_Driver_Pref_Pane.xib */,
+				62E231111A3E151A009C0D5B /* Xone_Driver_Pref_Pane.xib */,
+				622AB5621A3E6135008A053A /* Xone_Driver_Pref_Pane.icns */,
 				6216F21719D285F200161299 /* Supporting Files */,
 			);
 			path = "Xone Driver Pref Pane";
@@ -127,21 +137,26 @@
 		62E8B31519D9030300501CDB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				62E8B2E119D7CA3200501CDB /* Controller_A.png */,
 				62E8B31619D903F900501CDB /* Controller_B.png */,
+				62E8B2C619D4866900501CDB /* Controller_Back.png */,
 				62E8B31719D903F900501CDB /* Controller_Down.png */,
+				62E231141A3E1723009C0D5B /* Controller_Guide.png */,
 				62E8B31819D903F900501CDB /* Controller_LB.png */,
 				62E8B31919D903F900501CDB /* Controller_Left.png */,
+				62E8B2DD19D75A7000501CDB /* Controller_LS.png */,
+				62E231161A3E173D009C0D5B /* Controller_LSC.png */,
+				62E231181A3E174D009C0D5B /* Controller_LT.png */,
 				62E8B31A19D903F900501CDB /* Controller_Menu.png */,
 				62E8B31B19D903F900501CDB /* Controller_RB.png */,
 				62E8B31C19D903F900501CDB /* Controller_Right.png */,
+				62E8B2DF19D7BE0500501CDB /* Controller_RS.png */,
+				62E2311A1A3E175D009C0D5B /* Controller_RSC.png */,
+				62E2311C1A3E1767009C0D5B /* Controller_RT.png */,
 				62E8B31D19D903F900501CDB /* Controller_Up.png */,
 				62E8B31E19D903F900501CDB /* Controller_View.png */,
 				62E8B31F19D903F900501CDB /* Controller_X.png */,
 				62E8B32019D903F900501CDB /* Controller_Y.png */,
-				62E8B2E119D7CA3200501CDB /* Controller_A.png */,
-				62E8B2DF19D7BE0500501CDB /* Controller_RS.png */,
-				62E8B2DD19D75A7000501CDB /* Controller_LS.png */,
-				62E8B2C619D4866900501CDB /* Controller_Back.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -218,21 +233,26 @@
 			files = (
 				62E8B32119D903F900501CDB /* Controller_B.png in Resources */,
 				62E8B32319D903F900501CDB /* Controller_LB.png in Resources */,
+				62E2311B1A3E175D009C0D5B /* Controller_RSC.png in Resources */,
 				62E8B2D919D7150000501CDB /* DDHidLib.framework in Resources */,
 				62E8B32619D903F900501CDB /* Controller_RB.png in Resources */,
 				62E8B32919D903F900501CDB /* Controller_View.png in Resources */,
-				6216F22119D285F200161299 /* Xone_Driver_Pref_Pane.xib in Resources */,
 				62E8B2DE19D75A7000501CDB /* Controller_LS.png in Resources */,
 				62E8B32419D903F900501CDB /* Controller_Left.png in Resources */,
 				62E8B2C719D4866900501CDB /* Controller_Back.png in Resources */,
 				62E8B2E019D7BE0500501CDB /* Controller_RS.png in Resources */,
 				62E8B32A19D903F900501CDB /* Controller_X.png in Resources */,
-				6216F21E19D285F200161299 /* Xone_Driver_Pref_Pane.tiff in Resources */,
+				622AB5631A3E6135008A053A /* Xone_Driver_Pref_Pane.icns in Resources */,
+				62E231151A3E1723009C0D5B /* Controller_Guide.png in Resources */,
 				62E8B32719D903F900501CDB /* Controller_Right.png in Resources */,
+				62E231131A3E151A009C0D5B /* Xone_Driver_Pref_Pane.xib in Resources */,
+				62E231191A3E174D009C0D5B /* Controller_LT.png in Resources */,
 				62E8B32B19D903F900501CDB /* Controller_Y.png in Resources */,
 				62E8B2E219D7CA3200501CDB /* Controller_A.png in Resources */,
+				62E2311D1A3E1767009C0D5B /* Controller_RT.png in Resources */,
 				62E8B32519D903F900501CDB /* Controller_Menu.png in Resources */,
 				62E8B32219D903F900501CDB /* Controller_Down.png in Resources */,
+				62E231171A3E173D009C0D5B /* Controller_LSC.png in Resources */,
 				62E8B32819D903F900501CDB /* Controller_Up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,10 +271,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6216F21F19D285F200161299 /* Xone_Driver_Pref_Pane.xib */ = {
+		62E231111A3E151A009C0D5B /* Xone_Driver_Pref_Pane.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6216F22019D285F200161299 /* Base */,
+				62E231121A3E151A009C0D5B /* Base */,
 			);
 			name = Xone_Driver_Pref_Pane.xib;
 			sourceTree = "<group>";

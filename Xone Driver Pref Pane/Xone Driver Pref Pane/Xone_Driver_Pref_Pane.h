@@ -54,7 +54,7 @@ enum class
     IBOutlet NSImageView* y_img;
     IBOutlet NSImageView* menu_img;
     IBOutlet NSImageView* view_img;
-    NSImageView* guide_img; // Unused
+    IBOutlet NSImageView* guide_img;
     IBOutlet NSImageView* ls_img; // Left Stick
     IBOutlet NSImageView* rs_img; // Right Stick
     IBOutlet NSImageView* lb_img; // Left Bumper
@@ -63,9 +63,11 @@ enum class
     IBOutlet NSImageView* down_img;
     IBOutlet NSImageView* left_img;
     IBOutlet NSImageView* right_img;
-    NSImageView* sync_img; // Unused
-    NSImageView* lt_img; // Left Trigger Unused
-    NSImageView* rt_img; // Right Trigger Unused
+    IBOutlet NSImageView* lsc_img;
+    IBOutlet NSImageView* lt_img;
+    IBOutlet NSImageView* rsc_img;
+    IBOutlet NSImageView* rt_img;
+//    NSImageView* sync_img; // Unused
     IBOutlet NSComboBox* controller_combo;
 }
 

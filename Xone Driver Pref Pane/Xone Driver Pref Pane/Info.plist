@@ -25,7 +25,7 @@
 	<key>NSMainNibFile</key>
 	<string>Xone_Driver_Pref_Pane</string>
 	<key>NSPrefPaneIconFile</key>
-	<string>Xone_Driver_Pref_Pane.tiff</string>
+	<string>Xone_Driver_Pref_Pane.icns</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>Xone Controller</string>
 	<key>NSPrincipalClass</key>
