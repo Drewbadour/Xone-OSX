@@ -1,11 +1,11 @@
 Xone-OSX
 ========
 
-### Current Release: Beta 0.3.0 (Dec. 22, 2014)
+### Current Release: Beta 0.3.1 (Dec. 23, 2014)
 
 ### This is a beta release. Use at your own discretion.
 
-**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!L9pjTJoS!lEVnzYkjSjQo6KMDsGKw_wqSCA11Qv47Lj39-JNP8og).**
+**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!HoIRnCAS!QHMsL-qrylb0mKlzPCurd0LZ6clDbg5sStkV-iXJsgI).**
 
 ## Installation
 

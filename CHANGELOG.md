@@ -1,3 +1,9 @@
+## 0.3.1 (2014-12-23)
+
+Features:
+
+ - Fixed issue where the code signature wouldn't have the right permissions
+
 ## 0.3.0 (2014-12-22)
 
 Features:
