@@ -5,7 +5,7 @@ Xone-OSX
 
 ### This is a beta release. Use at your own discretion.
 
-**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!HoIRnCAS!QHMsL-qrylb0mKlzPCurd0LZ6clDbg5sStkV-iXJsgI).**
+**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!CspWVSIC!5lngix_yrFEcnKWnLk_Kl0ctm72O6-CvmoRdrEVay8I).**
 
 ## Installation
 
