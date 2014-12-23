@@ -1,38 +1,21 @@
 Xone-OSX
 ========
 
-### Current Release: Beta 0.2.0 (Dec. 14, 2014)
+### Current Release: Beta 0.3.0 (Dec. 22, 2014)
 
-### This is an unsigned, beta release. Use at your own discretion.
+### This is a beta release. Use at your own discretion.
 
-**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!SsJFSSxR!8eyrbuTR9FxIRH0G4q-ZzOSJfVQDzi-9InnL7EbPjWc).**
+**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!L9pjTJoS!lEVnzYkjSjQo6KMDsGKw_wqSCA11Qv47Lj39-JNP8og).**
 
 ## Installation
 
-#### Install on OS X 10.10 Yosemite
-**NOTE: Entering these terminal commands will disable a security feature of OS X. This is the same process required to enable trim. More detail can be found [here](http://www.cindori.org/trim-enabler-and-yosemite/).**
- - Enter the following command into your terminal:
-  - sudo nvram boot-args=kext-dev-mode=1
- - Enter password if required
+#### Install on OS X 10.9+
+ - Run the installer located above.
  - Reboot
- - Run the installer
- - Reboot
- - Plug the controller in, without powering it on, and it should light up
+ - Plug the controller in, without powering it on, and it should light up.
+ - Enjoy!
  
 I don't recommend leaving batteries in the controller while using it wired for extended periods of time. This could potentially cause wear on the batteries that is best avoided.
-
-#### Install on OS X 10.9 or earlier
-=======
-~~**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!DgpAhZxT!4jLE6xXmeQQekeRwvItyUUW4Ku3E6F5jRAT_kmkaPMI).**~~
-**The installer is currently broken. The only way to use it currently is to follow these steps:**
- - Download the project.
- - Build the "Xbox One Controller Driver" project.
- - Copy the product into the "/tmp" folder
- - Type these commands into the terminal:
-  - cd /tmp
-  - sudo kextutil "Xone Driver.kext"
- - And then plug your controller in
- - You will have to run kextutil every time you want to use the controller. And if you reboot, you will have to follow all of the steps from copying the product again.
 
 This is a kext and preference pane that allows users to use the Xbox One controller with their OS X computer. Because the Xbox One controller does not identify as a Human Interface Device, and requires custom startup code, a custom driver had to be made.
 
@@ -42,6 +25,7 @@ This is a kext and preference pane that allows users to use the Xbox One control
  - Invert X and Y for each stick individually
  - Preference pane allows you to see your controller in action
  - New awesome graphics, thanks to k1down
+ - Signed
 
 ## Support List:
  - DDHidLib (Ex. OpenEmu)

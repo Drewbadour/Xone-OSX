@@ -56,6 +56,7 @@ typedef struct {
     UInt8 left_hand;
     UInt8 right_hand;
     UInt8 length; // Length of time to rumble
+    UInt16 dummy_pack;
 } XONE_OUT_RUMBLE;
 
 enum {

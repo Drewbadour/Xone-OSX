@@ -74,14 +74,6 @@ protected:
      @result <code>true</code> if read succeeded. <code>false</code> if the read failed.*/
     bool queue_read();
     
-    /*! @function queue_write
-     @abstract Queues a write to the Xbox One controller.
-     @discussion Only used for writing the init bytes to the controller.
-     @param bytes The data to be sent.
-     @param length The count of bytes to send.
-     @result <code>true</code> if write succeeded, <code>false</code> if the write failed. */
-    bool queue_write(const void* bytes, UInt32 length);
-    
     /*! @function release_all
      @abstract Releases all newed memory.
      @discussion Checks values and then subsequently releases them. */
@@ -119,6 +111,14 @@ public:
     // IOService methods
     virtual IOReturn setProperties(OSObject *properties);
     virtual IOReturn message(UInt32 type, IOService *provider, void *argument);
+    
+    /*! @function queue_write
+     @abstract Queues a write to the Xbox One controller.
+     @discussion Only used for writing the init bytes to the controller.
+     @param bytes The data to be sent.
+     @param length The count of bytes to send.
+     @result <code>true</code> if write succeeded, <code>false</code> if the write failed. */
+    bool queue_write(const void* bytes, UInt32 length);
     
     /*! @function sent_data
      @abstract Callback after data sent.

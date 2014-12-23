@@ -1,3 +1,9 @@
+## 0.3.0 (2014-12-22)
+
+Features:
+
+ - Kext is now signed!
+
 ## 0.2.0 (2014-12-14)
 
 Features:

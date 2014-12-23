@@ -91,7 +91,7 @@ IOReturn Xone_Controller::setReport(IOMemoryDescriptor* report, IOHIDReportType 
     switch(header->message_type)
     {
         case force_feedback:  // Set force feedback
-            if((header->packet_size != report->getLength()) || (header->packet_size != 0x04))
+            if ((header->packet_size != report->getLength()) || (header->packet_size != 0x04))
                 return kIOReturnUnsupported;
             else
             {

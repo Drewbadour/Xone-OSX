@@ -105,7 +105,6 @@ UInt32 com_vestigl_driver_Xone_Driver::get_max_packet_size(IOUSBPipe *pipe)
         return ed->wMaxPacketSize;
 }
 
-
 bool com_vestigl_driver_Xone_Driver::start(IOService* provider)
 {
     const IOUSBConfigurationDescriptor* cd;
