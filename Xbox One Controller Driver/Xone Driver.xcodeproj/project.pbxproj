@@ -259,7 +259,6 @@
 				MODULE_VERSION = 1.0.0d1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Xone Driver";
-				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -275,7 +274,6 @@
 				MODULE_VERSION = 1.0.0d1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Xone Driver";
-				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Release;
