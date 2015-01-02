@@ -41,9 +41,13 @@ This is a kext and preference pane that allows users to use the Xbox One control
 ## Developer Notes
 
 #### Yosemite Kext Signatures
-OS X 10.10 Yosemite introduced a new security feature requiring _all_ kernel extensions to be signed with a _special_ certificate specifically for signing kernel extensions. For those hoping to build and run the kext from source, have a couple of options.
+OS X Yosemite introduced a new security feature requiring _all_ kernel extensions to be signed by a certificate with a _new_ custom extension (OID `1.2.840.113635.100.6.1.18`) that designates it as a kext-signing certificate. On reboot, unsigned kexts or those with invalid signatures will be left unloaded and the system will alert the user via a warning.
+<img src="http://i.imgur.com/huqvz6Y.png" width="532" height="287" alt="Yosemite kext signature alert">
 
-1. A kext developer mode can be enabled to allow invalid signatures. _This is a global setting and will disable kext signature checking for the entire system!_ To enable the mode, run the following and reboot:
+Those hoping to build and run the kext from source, have a couple of options.
+
+##### Disable Signature Checking
+A kext developer mode can be enabled to allow invalid signatures. _This is a global setting and will disable kext signature checking for the entire system!_ To enable the mode, run the following and reboot:
 ```sh
 $ sudo nvram boot-args=kext-dev-mode=1
 ```
@@ -52,15 +56,16 @@ To revert to the system default setting of disallowing invalid kext signatures, 
 $ sudo nvram -d boot-args
 ```
 
-2. Those enrolled in the [Mac Developer Program](https://developer.apple.com/programs/mac/) can request the certificate on the Apple Developer page [Requesting a Developer ID Certificate for Signing Kexts](https://developer.apple.com/contact/kext/) - though it is worth noting that the certificate is intended for those needing to sign a kext that is commercially shipped or broadly distributed through a large organization.
+##### Request A Kext-Signing Cert
+If enrolled in the [Mac Developer Program](https://developer.apple.com/programs/mac/), one can request the special certificate on the Apple Developer page [Requesting a Developer ID Certificate for Signing Kexts](https://developer.apple.com/contact/kext/) - it is worth noting that the certificate is intended for those needing to sign a kext that is commercially shipped or broadly distributed through a large organization.
 
-#### Load State
-Kernel extensions are loaded on demand and if the controller does not light up when attached one could check if to ensure it is loaded. The kext's status should be displayed if running via:
+#### Kext Loading
+Kernel extensions are loaded on demand and if the controller does not light up when attached, one could check if the kext is loaded - the kext's status should be displayed if loaded via:
 ```sh
 $ kextstat | grep Xone
 ```
 
-Though generally unnecessary, the kext can be manually loaded via:
+Though generally unnecessary, the kext can be manually loaded as well:
 ```sh
 $ sudo kextutil -t /Library/Extensions/Xone\ Driver.kext
 ```
