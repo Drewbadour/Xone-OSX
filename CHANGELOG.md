@@ -1,6 +1,18 @@
-## 0.3.1 (2014-12-23)
+## 0.4.0 (2015-01-02)
 
 Features:
+
+ - Controller now does its best to emulate a 360 controller, increasing compatibility.
+
+Compatibility Added:
+
+ - Awesomenauts
+ - Race the Sun
+ - Shovel Knight
+
+## 0.3.1 (2014-12-23)
+
+Bugfixes:
 
  - Fixed issue where the code signature wouldn't have the right permissions
 

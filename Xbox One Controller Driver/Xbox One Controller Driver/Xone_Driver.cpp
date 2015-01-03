@@ -377,6 +377,7 @@ void com_vestigl_driver_Xone_Driver::got_data(void* target, void* parameter, IOR
                             if (report->header.packet_size == in_report_length)
                             {
                                 apply_user_settings(xone_in_buffer);
+                                change_to_x360_packet(xone_in_buffer);
                                 err = xone_controller->handleReport(xone_in_buffer, kIOHIDReportTypeInput);
                                 if (err != kIOReturnSuccess)
                                 {
@@ -409,6 +410,28 @@ void com_vestigl_driver_Xone_Driver::got_data(void* target, void* parameter, IOR
             queue_read();
         }
     }
+}
+
+
+void com_vestigl_driver_Xone_Driver::change_to_x360_packet(IOBufferMemoryDescriptor *buffer)
+{
+    XONE_IN_REPORT* report = (XONE_IN_REPORT*)buffer->getBytesNoCopy();
+    UInt16 new_buttons = 0;
+    new_buttons |= ((report->buttons & 4) == 4) << 4;
+    new_buttons |= ((report->buttons & 8) == 8) << 5;
+    new_buttons |= ((report->buttons & 16) == 16) << 12;
+    new_buttons |= ((report->buttons & 32) == 32) << 13;
+    new_buttons |= ((report->buttons & 64) == 64) << 14;
+    new_buttons |= ((report->buttons & 128) == 128) << 15;
+    new_buttons |= ((report->buttons & 256) == 256) << 0;
+    new_buttons |= ((report->buttons & 512) == 512) << 1;
+    new_buttons |= ((report->buttons & 1024) == 1024) << 2;
+    new_buttons |= ((report->buttons & 2048) == 2048) << 3;
+    new_buttons |= ((report->buttons & 4096) == 4096) << 8;
+    new_buttons |= ((report->buttons & 8192) == 8192) << 9;
+    new_buttons |= ((report->buttons & 16384) == 16384) << 6;
+    new_buttons |= ((report->buttons & 32768) == 32768) << 7;
+    report->buttons = new_buttons;
 }
 
 

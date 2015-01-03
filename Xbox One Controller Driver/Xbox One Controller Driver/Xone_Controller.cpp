@@ -144,12 +144,14 @@ OSNumber* Xone_Controller::newPrimaryUsagePageNumber() const
 
 OSNumber* Xone_Controller::newProductIDNumber() const
 {
-    return OSNumber::withNumber(GetOwnerProvider(this)->GetProductID(),16);
+    return OSNumber::withNumber(654, 16);
+//    return OSNumber::withNumber(GetOwnerProvider(this)->GetProductID(),16);
 }
 
 OSString* Xone_Controller::newProductString() const
 {
-    return getDeviceString(GetOwnerProvider(this)->GetProductStringIndex());
+    return OSString::withCString("X360Controller");
+//    return getDeviceString(GetOwnerProvider(this)->GetProductStringIndex());
 }
 
 OSString* Xone_Controller::newSerialNumberString() const

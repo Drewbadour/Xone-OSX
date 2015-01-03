@@ -85,9 +85,15 @@ protected:
     void xone_connect();
     
     /*! @function xone_disconnect
-     @abstract Custon deconstruction of Xbox One device.
+     @abstract Custom deconstruction of Xbox One device.
      @discussion Terminates and releases the controller. */
     void xone_disconnect();
+    
+    /*! @function change_to_x360_packet
+     @abstract Reorder the bytes of the packet to be identical to that of the Xbox 360 packet
+     @discussion Not sure if this is the most efficient way to do this.
+     @param buffer The memory buffer from the recieved data callback. */
+    void change_to_x360_packet(IOBufferMemoryDescriptor *buffer);
     
     /*! @function apply_user_settings
      @abstract Applies settings to controller data.
