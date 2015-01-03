@@ -31,8 +31,7 @@ typedef struct {
 
 typedef struct {
     XONE_HEADER header;
-    UInt8 button_one;
-    UInt8 button_two;
+    UInt16 buttons;
     UInt16 trigger_left;
     UInt16 trigger_right;
     SInt16 left_stick_x;

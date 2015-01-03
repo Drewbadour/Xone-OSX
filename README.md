@@ -1,16 +1,16 @@
 Xone-OSX
 ========
 
-### Current Release: Beta 0.3.1 (Dec. 23, 2014)
+### Current Release: Beta 0.4.0 (Jan. 02, 2015)
 
 ### This is a beta release. Use at your own discretion.
 
-**NOTE: If you want to use the driver without access to the source code, download the latest version [here](https://mega.co.nz/#!CspWVSIC!5lngix_yrFEcnKWnLk_Kl0ctm72O6-CvmoRdrEVay8I).**
+**NOTE: If you want to use the driver without access to the source code, check the releases page.**
 
 ## Installation
 
 #### Install on OS X 10.9+
- - Run the installer located above.
+ - Run the installer located on the releases page.
  - Reboot
  - Plug the controller in, without powering it on, and it should light up.
  - Enjoy!
@@ -28,6 +28,7 @@ This is a kext and preference pane that allows users to use the Xbox One control
  - Signed
 
 ## Support List:
+ - Most games that support a 360 controller. Create an issue if a game works with the 360, but not the Xbox One controller.
  - DDHidLib (Ex. OpenEmu)
  - Steamworks Controller API (Steam Big Picture, and other Steam games that implement the API)
 
@@ -71,12 +72,10 @@ $ sudo kextutil -t /Library/Extensions/Xone\ Driver.kext
 ```
 
 ## Discussion
- - I've done my best to match the controls of the Xbox One controller to the Xbox 360 controller.
  - There doesn't appear to be any documentation as to how to implement a KEXT so that the controller is recognized as a GCController, so currently it is not.
- - I couldn't quite grasp how to convert the D-pad Data (4 consecutive bits with 0 for unpressed and 1 for currently pressed) into a proper HID implementation. So the D-Pad is currently bound to buttons 13 - 16.
- - I needed a game that supported rumble to implement rumble, and Bastion appears to not like my implementation of the controller. (Ex. The left trigger appears to take the place of every face button, and also appears to act as the left stick in game)
- - The guide button is handled in a separate packet, but I managed to have it recognized as button 11.
- - The sync button is also visible to the user and is encoded as button 12.
+ - I couldn't quite grasp how to convert the D-pad Data (4 consecutive bits with 0 for unpressed and 1 for currently pressed) into a proper HID implementation.
+ - I'm looking into updates to the TattieBogle driver that make rumble implementation clearer.
+ - The xbox button is handled in a separate packet, which means that it has to be different from the Xbox 360 implementation.
 
 ## Button Layout
 | HID Button Number | Controller Button Name |
@@ -87,22 +86,22 @@ $ sudo kextutil -t /Library/Extensions/Xone\ Driver.kext
 | 4                 | Y                      |
 | 5                 | Left Bumper            |
 | 6                 | Right Bumper           |
-| 7                 | View (Back)            |
-| 8                 | Menu (Start)           |
-| 9                 | Left Stick Click       |
-| 10                | Right Stick Click      |
-| 11                | Guide (Xbox)           |
-| 12                | Sync                   |
-| 13                | D-pad Up               |
-| 14                | D-pad Down             |
-| 15                | D-pad Left             |
-| 16                | D-pad Right            |
+| 7                 | Left Stick Click       |
+| 8                 | Right Stick Click      |
+| 9                 | Menu (Start)           |
+| 10                | View (Back)            |
+| 11                | Guide (Xbox) on 360    |
+| 12                | D-pad Up               |
+| 13                | D-pad Down             |
+| 14                | D-pad Left             |
+| 15                | D-pad Right            |
+| 16                | Xbox (Guide) on Xone   |
 
 | Axis ID           | Axis on Controller     |
 |:-----------------:|:----------------------:|
 | X                 | Left Stick X           |
 | Y                 | Left Stick Y           |
-| Z                 | Right Stick X          |
-| Rx                | Right Stick Y          |
-| Ry                | Left Trigger           |
+| Z                 | Left Trigger           |
+| Rx                | Right Stick X          |
+| Ry                | Right Stick Y          |
 | Rz                | Right Trigger          |

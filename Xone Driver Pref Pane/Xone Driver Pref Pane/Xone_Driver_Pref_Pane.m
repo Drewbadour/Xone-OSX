@@ -99,7 +99,7 @@ NSString* const invert_y_str = @"Invert Y-Axis";
     joysticks = [NSMutableArray arrayWithArray:[DDHidJoystick allJoysticks]];
     for (long i = [joysticks count] - 1; i >= 0; i--)
     {
-        if ([joysticks[i] productId] != 721)
+        if (!([joysticks[i] productId] == 721 || [joysticks[i] productId] == 654))
             [joysticks removeObjectAtIndex:i];
         else if ([joysticks[i] vendorId] != 1118)
             [joysticks removeObjectAtIndex:i];
@@ -281,34 +281,35 @@ NSString* const invert_y_str = @"Invert Y-Axis";
                 [rb_img setHidden:NO];
                 break;
             case 6:
-                [view_img setHidden:NO];
-                break;
-            case 7:
-                [menu_img setHidden:NO];
-                break;
-            case 8:
                 [lsc_img setHidden:NO];
                 break;
-            case 9:
+            case 7:
                 [rsc_img setHidden:NO];
                 break;
+            case 8:
+                [menu_img setHidden:NO];
+                break;
+            case 9:
+                [view_img setHidden:NO];
+                break;
             case 10:
+                // 360 Location of Guide Button
                 [guide_img setHidden:NO];
                 break;
             case 11:
-                // Sync button no image
-                break;
-            case 12:
                 [up_img setHidden:NO];
                 break;
-            case 13:
+            case 12:
                 [down_img setHidden:NO];
                 break;
-            case 14:
+            case 13:
                 [left_img setHidden:NO];
                 break;
-            case 15:
+            case 14:
                 [right_img setHidden:NO];
+                break;
+            case 15:
+                [guide_img setHidden:NO];
                 break;
             default:
                 break;
@@ -341,34 +342,35 @@ NSString* const invert_y_str = @"Invert Y-Axis";
                 [rb_img setHidden:YES];
                 break;
             case 6:
-                [view_img setHidden:YES];
-                break;
-            case 7:
-                [menu_img setHidden:YES];
-                break;
-            case 8:
                 [lsc_img setHidden:YES];
                 break;
-            case 9:
+            case 7:
                 [rsc_img setHidden:YES];
                 break;
+            case 8:
+                [menu_img setHidden:YES];
+                break;
+            case 9:
+                [view_img setHidden:YES];
+                break;
             case 10:
+                // 360 Location of Guide Button
                 [guide_img setHidden:YES];
                 break;
             case 11:
-                // Sync button no image
-                break;
-            case 12:
                 [up_img setHidden:YES];
                 break;
-            case 13:
+            case 12:
                 [down_img setHidden:YES];
                 break;
-            case 14:
+            case 13:
                 [left_img setHidden:YES];
                 break;
-            case 15:
+            case 14:
                 [right_img setHidden:YES];
+                break;
+            case 15:
+                [guide_img setHidden:YES];
                 break;
             default:
                 break;
@@ -416,61 +418,66 @@ NSString* const invert_y_str = @"Invert Y-Axis";
 
 - (void)ddhidJoystick:(DDHidJoystick *)joystick stick:(unsigned)stick otherAxis:(unsigned)otherAxis valueChanged:(int)value
 {
-    // Axes 0 = LT, 1 = RT, 2 = Right Stick X, 3 = R Stick Y
     if ([joystick locationId] == [joysticks[[controller_combo indexOfSelectedItem]] locationId])
     {
-        if (otherAxis == 0)
+        // Right Stick
+        if (stick == 1)
         {
-            if(value > [trigger_deadzone intValue])
+            if (otherAxis == 0)
             {
-                // Left Trigger Light
-                [lt_img setHidden:NO];
+                if (abs(value) > [right_stick_deadzone intValue])
+                {
+                    double offset = 11 * value / [max_stick intValue];
+                    if ([right_invert_x state])
+                        offset = -offset;
+                    [rs_img setFrame:NSMakeRect(img_pos.origin.x + offset, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
+                }
+                else
+                {
+                    [rs_img setFrame:NSMakeRect(img_pos.origin.x, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
+                }
             }
-            else
+            else if (otherAxis == 1)
             {
-                [lt_img setHidden:YES];
+                if (abs(value) > [right_stick_deadzone intValue])
+                {
+                    double offset = 11 * value / [max_stick intValue];
+                    if (![right_invert_y state])
+                        offset = -offset;
+                    [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y + offset, img_pos.size.width, img_pos.size.height)];
+                }
+                else
+                {
+                    [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y, img_pos.size.width, img_pos.size.height)];
+                }
             }
         }
-        if (otherAxis == 1)
+        // Triggers
+        if (stick == 2)
         {
-            if(value > [trigger_deadzone intValue])
+            if (otherAxis == 0)
             {
-                // Right Trigger Light
-                [rt_img setHidden:NO];
+                if (value > [trigger_deadzone intValue])
+                {
+                    // Left Trigger Light
+                    [lt_img setHidden:NO];
+                }
+                else
+                {
+                    [lt_img setHidden:YES];
+                }
             }
-            else
+            if (otherAxis == 1)
             {
-                [rt_img setHidden:YES];
-            }
-        }
-        if (otherAxis == 2)
-        {
-            if(abs(value) > [right_stick_deadzone intValue])
-            {
-                // Right Stick Light
-                double offset = 11 * value / [max_stick intValue];
-                if ([right_invert_x state])
-                    offset = -offset;
-                [rs_img setFrame:NSMakeRect(img_pos.origin.x + offset, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
-            }
-            else
-            {
-                [rs_img setFrame:NSMakeRect(img_pos.origin.x, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
-            }
-        }
-        else if (otherAxis == 3)
-        {
-            if(abs(value) > [right_stick_deadzone intValue])
-            {
-                // Right Stick Light
-                double offset = 11 * value / [max_stick intValue];
-                if (![right_invert_y state])
-                    offset = -offset;
-                [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y + offset, img_pos.size.width, img_pos.size.height)];
-            }
-            else
-            {
-                [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y, img_pos.size.width, img_pos.size.height)];
+                if (value > [trigger_deadzone intValue])
+                {
+                    // Right Trigger Light
+                    [rt_img setHidden:NO];
+                }
+                else
+                {
+                    [rt_img setHidden:YES];
+                }
             }
         }
     }
