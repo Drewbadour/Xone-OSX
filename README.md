@@ -5,7 +5,7 @@ Xone-OSX
 
 ### This is a beta release. Use at your own discretion.
 
-**NOTE: If you want to use the driver without access to the source code, check the releases page.**
+**NOTE: If you want to use the driver without access to the source code, [check the releases page](https://github.com/FranticRain/Xone-OSX/releases/tag/v0.4.0).**
 
 ## Installation
 
