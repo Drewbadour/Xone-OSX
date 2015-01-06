@@ -35,9 +35,9 @@
 			<key>IOMatchCategory</key>
 			<string>com_vestigl_driver_Xone_Driver</string>
 			<key>idProduct</key>
-			<integer>3695</integer>
-			<key>idVendor</key>
 			<integer>326</integer>
+			<key>idVendor</key>
+			<integer>3695</integer>
 		</dict>
 		<key>MicrosoftXboxOneController</key>
 		<dict>
