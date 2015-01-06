@@ -201,9 +201,29 @@ bool com_vestigl_driver_Xone_Driver::start(IOService* provider)
         return false;
     }
     
-    // Minimum byte data needed to light up the Xbox button and allow the controller to take input
-    UInt8 write_buffer[2] { 0x05, 0x20 };
-    if (!queue_write(write_buffer, 2))
+    UInt8 first_buffer[] = { 0x02, 0x20, 0x01, 0x1C, 0x7E, 0xED, 0x8B, 0x11, 0x0F, 0xA8, 0x00, 0x00, 0x5E, 0x04, 0xD1, 0x02, 0x01, 0x00, 0x01, 0x00, 0x17, 0x01, 0x02, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00 };
+    if (!queue_write(first_buffer, sizeof(first_buffer)))
+    {
+        release_all();
+        return false;
+    }
+    
+    UInt8 second_buffer[] = { 0x05, 0x20, 0x00, 0x09, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x55, 0x53 };
+    if (!queue_write(second_buffer, sizeof(second_buffer)))
+    {
+        release_all();
+        return false;
+    }
+    
+    UInt8 third_buffer[] = { 0x05, 0x20, 0x01, 0x01, 0x00 };
+    if (!queue_write(third_buffer, sizeof(third_buffer)))
+    {
+        release_all();
+        return false;
+    }
+    
+    UInt8 fourth_buffer[] = { 0x0A, 0x20, 0x02, 0x03, 0x00, 0x01, 0x14 };
+    if (!queue_write(fourth_buffer, sizeof(fourth_buffer)))
     {
         release_all();
         return false;
