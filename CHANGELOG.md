@@ -1,3 +1,9 @@
+## 0.4.1 (2015-01-05)
+
+Compatibility Added:
+
+ - Rock Candy Xbox One Controller
+
 ## 0.4.0 (2015-01-02)
 
 Features:

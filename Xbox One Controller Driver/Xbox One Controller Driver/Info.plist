@@ -22,6 +22,23 @@
 	<string>1</string>
 	<key>IOKitPersonalities</key>
 	<dict>
+		<key>RockCandyXboxOneController</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.vestigl.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>IOClass</key>
+			<string>com_vestigl_driver_Xone_Driver</string>
+			<key>IOKitDebug</key>
+			<integer>0</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBDevice</string>
+			<key>IOMatchCategory</key>
+			<string>com_vestigl_driver_Xone_Driver</string>
+			<key>idProduct</key>
+			<integer>3695</integer>
+			<key>idVendor</key>
+			<integer>326</integer>
+		</dict>
 		<key>MicrosoftXboxOneController</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
