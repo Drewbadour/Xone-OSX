@@ -591,8 +591,27 @@ void com_vestigl_driver_Xone_Driver::free()
 
 IOReturn com_vestigl_driver_Xone_Driver::message(UInt32 type, IOService* provider, void* argument)
 {
+    UInt8 first_buffer[] = { 0x02, 0x20, 0x01, 0x1C, 0x7E, 0xED, 0x8B, 0x11, 0x0F, 0xA8, 0x00, 0x00, 0x5E, 0x04, 0xD1, 0x02, 0x01, 0x00, 0x01, 0x00, 0x17, 0x01, 0x02, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00 };
+    UInt8 second_buffer[] = { 0x05, 0x20, 0x00, 0x09, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x55, 0x53 };
+    UInt8 third_buffer[] = { 0x05, 0x20, 0x01, 0x01, 0x00 };
+    UInt8 fourth_buffer[] = { 0x0A, 0x20, 0x02, 0x03, 0x00, 0x01, 0x14 };
     switch (type)
     {
+        case kIOMessageDeviceSignaledWakeup:
+            if (queue_write(first_buffer, sizeof(first_buffer)))
+            {
+                if (queue_write(second_buffer, sizeof(second_buffer)))
+                {
+                    if (queue_write(third_buffer, sizeof(third_buffer)))
+                    {
+                        if (queue_write(fourth_buffer, sizeof(fourth_buffer)))
+                        {
+                            return kIOReturnSuccess;
+                        }
+                    }
+                }
+            }
+            return kIOReturnError;
         case kIOMessageServiceIsTerminated:
             IOLog("kIOMessageServiceIsTerminated\n");
             release_all();
@@ -601,6 +620,9 @@ IOReturn com_vestigl_driver_Xone_Driver::message(UInt32 type, IOService* provide
             IOLog("kIOMessageServiceIsRequestingClose\n");
             // Ignore this, otherwise the controller will close prematurely.
             return kIOReturnUnsupported;
+        case kIOMessageSystemWillSleep:
+            // Use a shutdown packet for the controller.
+            // For now since packet is unknown, drop into default.
         default:
             return super::message(type,provider,argument);
     }
