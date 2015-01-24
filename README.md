@@ -19,6 +19,10 @@ I don't recommend leaving batteries in the controller while using it wired for e
 
 This is a kext and preference pane that allows users to use the Xbox One controller with their OS X computer. Because the Xbox One controller does not identify as a Human Interface Device, and requires custom startup code, a custom driver had to be made.
 
+## Uninstall
+
+There is an uninstaller included in the .dmg. Simply run it, and it will take care of the rest!
+
 ## Features
  - Performs custom startup and handles all buttons on the controller
  - Customizable deadzones for both sticks and triggers
