@@ -22,40 +22,78 @@
 	<string>1</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>RockCandyXboxOneController</key>
+        <key>PowerAMiniXboxOne</key>
+        <dict>
+            <key>CFBundleIdentifier</key>
+            <string>com.vestigl.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+            <key>IOClass</key>
+            <string>com_vestigl_driver_Xone_Driver</string>
+            <key>IOProviderClass</key>
+            <string>IOUSBInterface</string>
+            <key>IOKitDebug</key>
+            <integer>0</integer>
+            <key>idVendor</key>
+            <integer>9414</integer>
+            <key>idProduct</key>
+            <integer>21530</integer>
+            <key>bConfigurationValue</key>
+            <integer>1</integer>
+            <key>bInterfaceNumber</key>
+            <integer>0</integer>
+        </dict>
+        <key>RockCandyXboxOneController</key>
+        <dict>
+            <key>CFBundleIdentifier</key>
+            <string>com.vestigl.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+            <key>IOClass</key>
+            <string>com_vestigl_driver_Xone_Driver</string>
+            <key>IOProviderClass</key>
+            <string>IOUSBInterface</string>
+            <key>IOKitDebug</key>
+            <integer>0</integer>
+            <key>idVendor</key>
+            <integer>3695</integer>
+            <key>idProduct</key>
+            <integer>326</integer>
+            <key>bConfigurationValue</key>
+            <integer>1</integer>
+            <key>bInterfaceNumber</key>
+            <integer>0</integer>
+        </dict>
+		<key>XboxOneController</key>
 		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.vestigl.driver.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>IOClass</key>
-			<string>com_vestigl_driver_Xone_Driver</string>
+            <key>CFBundleIdentifier</key>
+            <string>com.vestigl.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+            <key>IOClass</key>
+            <string>com_vestigl_driver_Xone_Driver</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBInterface</string>
 			<key>IOKitDebug</key>
 			<integer>0</integer>
-			<key>IOProviderClass</key>
-			<string>IOUSBDevice</string>
-			<key>IOMatchCategory</key>
-			<string>com_vestigl_driver_Xone_Driver</string>
-			<key>idProduct</key>
-			<integer>326</integer>
-			<key>idVendor</key>
-			<integer>3695</integer>
-		</dict>
-		<key>MicrosoftXboxOneController</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.vestigl.driver.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>IOClass</key>
-			<string>com_vestigl_driver_Xone_Driver</string>
-			<key>IOKitDebug</key>
-			<integer>0</integer>
-			<key>IOProviderClass</key>
-			<string>IOUSBDevice</string>
-			<key>IOMatchCategory</key>
-			<string>com_vestigl_driver_Xone_Driver</string>
-			<key>idProduct</key>
-			<integer>721</integer>
 			<key>idVendor</key>
 			<integer>1118</integer>
+			<key>idProduct</key>
+			<integer>721</integer>
+			<key>bConfigurationValue</key>
+			<integer>1</integer>
+			<key>bInterfaceNumber</key>
+			<integer>0</integer>
 		</dict>
+        <key>XboxOneControllerDevice</key>
+        <dict>
+            <key>CFBundleIdentifier</key>
+            <string>com.apple.driver.AppleUSBComposite</string>
+            <key>IOClass</key>
+            <string>AppleUSBComposite</string>
+            <key>IOProviderClass</key>
+            <string>IOUSBDevice</string>
+            <key>idVendor</key>
+            <integer>1118</integer>
+            <key>bDeviceSubClass</key>
+            <integer>71</integer>
+            <key>bDeviceProtocol</key>
+            <integer>208</integer>
+        </dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2014 Vestigl. All rights reserved.</string>
@@ -65,6 +103,8 @@
 		<string>2.0</string>
 		<key>com.apple.iokit.IOUSBFamily</key>
 		<string>683.4</string>
+		<key>com.apple.iokit.IOUSBHIDDriver</key>
+		<string>660.4</string>
 		<key>com.apple.kpi.iokit</key>
 		<string>13.3</string>
 		<key>com.apple.kpi.libkern</key>

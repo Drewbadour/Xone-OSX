@@ -21,12 +21,17 @@
 
 //#include <IOKit/usb/IOUSBDevice.h>
 //#include "Controller.h"
+
 #include <IOKit/usb/IOUSBDevice.h>
 #include <IOKit/usb/IOUSBInterface.h>
 #include "Xone_Controller.h"
 #include "ControlStruct.h"
 namespace HID_One {
-#include "xonehid.h"
+#ifdef X360MODE
+    #include "360hid.h"
+#else
+    #include "xonehid.h"
+#endif
 }
 #include "Xone_Driver.h"
 
@@ -144,14 +149,20 @@ OSNumber* Xone_Controller::newPrimaryUsagePageNumber() const
 
 OSNumber* Xone_Controller::newProductIDNumber() const
 {
+#ifdef X360MODE
     return OSNumber::withNumber(654, 16);
-//    return OSNumber::withNumber(GetOwnerProvider(this)->GetProductID(),16);
+#else
+    return OSNumber::withNumber(GetOwnerProvider(this)->GetProductID(),16);
+#endif
 }
 
 OSString* Xone_Controller::newProductString() const
 {
+#ifdef X360MODE
     return OSString::withCString("X360Controller");
-//    return getDeviceString(GetOwnerProvider(this)->GetProductStringIndex());
+#else
+    return getDeviceString(GetOwnerProvider(this)->GetProductStringIndex());
+#endif
 }
 
 OSString* Xone_Controller::newSerialNumberString() const

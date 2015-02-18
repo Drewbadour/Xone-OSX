@@ -1,3 +1,10 @@
+## 1.0.0 (2015-02-17)
+
+Features:
+
+ - Controller wakes up from sleep
+ - Full rewrite
+
 ## 0.4.1 (2015-01-05)
 
 Compatibility Added:

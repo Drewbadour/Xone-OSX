@@ -7,23 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62157DA719D07DB100240AAD /* xonehid.h in Headers */ = {isa = PBXBuildFile; fileRef = 62157DA619D07DB100240AAD /* xonehid.h */; };
-		62176B7119D0B717001A415B /* Data Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 62176B7019D0B717001A415B /* Data Notes.rtf */; };
-		624D66DC19C95EE200D01105 /* Xone_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 624D66DB19C95EE200D01105 /* Xone_Controller.cpp */; };
-		62788F6819C37D09000435ED /* Xone_Driver.h in Headers */ = {isa = PBXBuildFile; fileRef = 62788F6719C37D09000435ED /* Xone_Driver.h */; };
-		62788F6A19C37D09000435ED /* Xone_Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62788F6919C37D09000435ED /* Xone_Driver.cpp */; };
+		628301D61A8A9896005CB93B /* Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628301D51A8A9896005CB93B /* Driver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		62157DA619D07DB100240AAD /* xonehid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xonehid.h; sourceTree = "<group>"; };
-		62176B7019D0B717001A415B /* Data Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Data Notes.rtf"; sourceTree = "<group>"; };
-		624D66DA19C95D7900D01105 /* Xone_Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xone_Controller.h; sourceTree = "<group>"; };
-		624D66DB19C95EE200D01105 /* Xone_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Xone_Controller.cpp; sourceTree = "<group>"; };
 		624D66DD19C9EEC600D01105 /* ControlStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlStruct.h; sourceTree = "<group>"; };
 		62788F6219C37D09000435ED /* Xone Driver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xone Driver.kext"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62788F6619C37D09000435ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62788F6719C37D09000435ED /* Xone_Driver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xone_Driver.h; sourceTree = "<group>"; };
-		62788F6919C37D09000435ED /* Xone_Driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Xone_Driver.cpp; sourceTree = "<group>"; };
+		628301BA1A8A8E37005CB93B /* 360hid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 360hid.h; sourceTree = "<group>"; };
+		628301D21A8A9741005CB93B /* Driver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Driver.h; sourceTree = "<group>"; };
+		628301D51A8A9896005CB93B /* Driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Driver.cpp; sourceTree = "<group>"; };
+		62ADF65A1A8FEA0800DD9837 /* xonehid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xonehid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,16 +31,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6216A91519DB13A900687AEB /* Xone_Controller */ = {
-			isa = PBXGroup;
-			children = (
-				624D66DA19C95D7900D01105 /* Xone_Controller.h */,
-				624D66DB19C95EE200D01105 /* Xone_Controller.cpp */,
-				62157DA619D07DB100240AAD /* xonehid.h */,
-			);
-			name = Xone_Controller;
-			sourceTree = "<group>";
-		};
 		62788F5819C37D09000435ED = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +50,12 @@
 		62788F6419C37D09000435ED /* Xone Driver */ = {
 			isa = PBXGroup;
 			children = (
-				6216A91519DB13A900687AEB /* Xone_Controller */,
-				62788F6719C37D09000435ED /* Xone_Driver.h */,
-				62788F6919C37D09000435ED /* Xone_Driver.cpp */,
+				628301D51A8A9896005CB93B /* Driver.cpp */,
+				628301D21A8A9741005CB93B /* Driver.h */,
+				62ADF65A1A8FEA0800DD9837 /* xonehid.h */,
+				628301BA1A8A8E37005CB93B /* 360hid.h */,
 				624D66DD19C9EEC600D01105 /* ControlStruct.h */,
 				62788F6519C37D09000435ED /* Supporting Files */,
-				62176B7019D0B717001A415B /* Data Notes.rtf */,
 			);
 			name = "Xone Driver";
 			path = "Xbox One Controller Driver";
@@ -92,8 +76,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62157DA719D07DB100240AAD /* xonehid.h in Headers */,
-				62788F6819C37D09000435ED /* Xone_Driver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +106,7 @@
 		62788F5919C37D09000435ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Vestigl;
 				TargetAttributes = {
 					62788F6119C37D09000435ED = {
@@ -154,7 +136,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62176B7119D0B717001A415B /* Data Notes.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,8 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62788F6A19C37D09000435ED /* Xone_Driver.cpp in Sources */,
-				624D66DC19C95EE200D01105 /* Xone_Controller.cpp in Sources */,
+				628301D61A8A9896005CB93B /* Driver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +188,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				METAL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -251,7 +231,7 @@
 		62788F6E19C37D09000435ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Drew Mills (G947KKM5RL)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				INFOPLIST_FILE = "Xbox One Controller Driver/Info.plist";
@@ -266,7 +246,7 @@
 		62788F6F19C37D09000435ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Drew Mills (G947KKM5RL)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				INFOPLIST_FILE = "Xbox One Controller Driver/Info.plist";

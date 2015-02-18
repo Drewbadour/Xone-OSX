@@ -87,22 +87,38 @@ NSString* const invert_y_str = @"Invert Y-Axis";
     [self loadStringValue:CFSTR("trigger_deadzone") forTextField:trigger_deadzone withDefault:[NSString stringWithFormat:@"%i", trigger_deadzone_default]];
     
     [self refresh:0];
-//    for (int i = 0; i < [joysticks count]; i++)
-//        [controller_combo addItemWithObjectValue:[NSString stringWithFormat:@"Controller %d", i + 1]];
-//    [controller_combo setNumberOfVisibleItems:[joysticks count]];
-//    if ([joysticks count] > 0)
-//        [controller_combo selectItemAtIndex:0];
+    for (int i = 0; i < [joysticks count]; i++)
+        [controller_combo addItemWithObjectValue:[NSString stringWithFormat:@"Controller %d", i + 1]];
+    [controller_combo setNumberOfVisibleItems:[joysticks count]];
+    if ([joysticks count] > 0)
+        [controller_combo selectItemAtIndex:0];
 }
 
 - (IBAction)refresh:(id)sender
 {
     joysticks = [NSMutableArray arrayWithArray:[DDHidJoystick allJoysticks]];
+    NSLog(@"JOYSTICK COUNT - %lu\n", (unsigned long)[joysticks count]);
     for (long i = [joysticks count] - 1; i >= 0; i--)
     {
-        if (!([joysticks[i] productId] == 721 || [joysticks[i] productId] == 654))
+        if ([joysticks[i] vendorId] == 1118)
+        {
+            if ([joysticks[i] productId] == 721) {
+                controllerType = XONE;
+                NSLog(@"Xone Controller\n");
+            }
+            else if ([joysticks[i] productId] == 654) {
+                controllerType = X360;
+                NSLog(@"X360 Controller\n");
+            }
+            else {
+                [joysticks removeObjectAtIndex:i];
+                NSLog(@"Remove product\n");
+            }
+        }
+        else {
             [joysticks removeObjectAtIndex:i];
-        else if ([joysticks[i] vendorId] != 1118)
-            [joysticks removeObjectAtIndex:i];
+            NSLog(@"Remove vendor\n");
+        }
     }
     
     [joysticks makeObjectsPerformSelector:@selector(setDelegate:) withObject:self];
@@ -260,6 +276,7 @@ NSString* const invert_y_str = @"Invert Y-Axis";
 {
     if ([joystick locationId] == [joysticks[[controller_combo indexOfSelectedItem]] locationId])
     {
+//        NSLog(@"Button Number - %d\n", buttonNumber);
         switch (buttonNumber)
         {
             case 0:
@@ -281,35 +298,61 @@ NSString* const invert_y_str = @"Invert Y-Axis";
                 [rb_img setHidden:NO];
                 break;
             case 6:
-                [lsc_img setHidden:NO];
+                if (controllerType == X360)
+                    [lsc_img setHidden:NO];
+                else if (controllerType == XONE)
+                    [view_img setHidden:NO];
                 break;
             case 7:
-                [rsc_img setHidden:NO];
+                if (controllerType == X360)
+                    [rsc_img setHidden:NO];
+                else if (controllerType == XONE)
+                    [menu_img setHidden:NO];
                 break;
             case 8:
-                [menu_img setHidden:NO];
+                if (controllerType == X360)
+                    [menu_img setHidden:NO];
+                else if (controllerType == XONE)
+                    [lsc_img setHidden:NO];
                 break;
             case 9:
-                [view_img setHidden:NO];
+                if (controllerType == X360)
+                    [view_img setHidden:NO];
+                else if (controllerType == XONE)
+                    [rsc_img setHidden:NO];
                 break;
             case 10:
                 // 360 Location of Guide Button
                 [guide_img setHidden:NO];
                 break;
             case 11:
-                [up_img setHidden:NO];
+                if (controllerType == X360)
+                    [up_img setHidden:NO];
+                // Sync on XONE. No image.
                 break;
             case 12:
-                [down_img setHidden:NO];
+                if (controllerType == X360)
+                    [down_img setHidden:NO];
+                else if (controllerType == XONE)
+                    [up_img setHidden:NO];
                 break;
             case 13:
-                [left_img setHidden:NO];
+                if (controllerType == X360)
+                    [left_img setHidden:NO];
+                else if (controllerType == XONE)
+                    [down_img setHidden:NO];
                 break;
             case 14:
-                [right_img setHidden:NO];
+                if (controllerType == X360)
+                    [right_img setHidden:NO];
+                else if (controllerType == XONE)
+                    [left_img setHidden:NO];
                 break;
             case 15:
-                [guide_img setHidden:NO];
+                if (controllerType == X360)
+                    [guide_img setHidden:NO];
+                else if (controllerType == XONE)
+                    [right_img setHidden:NO];
                 break;
             default:
                 break;
@@ -342,35 +385,61 @@ NSString* const invert_y_str = @"Invert Y-Axis";
                 [rb_img setHidden:YES];
                 break;
             case 6:
-                [lsc_img setHidden:YES];
+                if (controllerType == X360)
+                    [lsc_img setHidden:YES];
+                else if (controllerType == XONE)
+                    [view_img setHidden:YES];
                 break;
             case 7:
-                [rsc_img setHidden:YES];
+                if (controllerType == X360)
+                    [rsc_img setHidden:YES];
+                else if (controllerType == XONE)
+                    [menu_img setHidden:YES];
                 break;
             case 8:
-                [menu_img setHidden:YES];
+                if (controllerType == X360)
+                    [menu_img setHidden:YES];
+                else if (controllerType == XONE)
+                    [lsc_img setHidden:YES];
                 break;
             case 9:
-                [view_img setHidden:YES];
-                break;
+                if (controllerType == X360)
+                    [view_img setHidden:YES];
+                else if (controllerType == XONE)
+                    [rsc_img setHidden:YES];
+//                break;
             case 10:
                 // 360 Location of Guide Button
                 [guide_img setHidden:YES];
                 break;
             case 11:
-                [up_img setHidden:YES];
+                if (controllerType == X360)
+                    [up_img setHidden:YES];
+                // Sync on XONE. No image.
                 break;
             case 12:
-                [down_img setHidden:YES];
+                if (controllerType == X360)
+                    [down_img setHidden:YES];
+                else if (controllerType == XONE)
+                    [up_img setHidden:YES];
                 break;
             case 13:
-                [left_img setHidden:YES];
+                if (controllerType == X360)
+                    [left_img setHidden:YES];
+                else if (controllerType == XONE)
+                    [down_img setHidden:YES];
                 break;
             case 14:
-                [right_img setHidden:YES];
+                if (controllerType == X360)
+                    [right_img setHidden:YES];
+                else if (controllerType == XONE)
+                    [left_img setHidden:YES];
                 break;
             case 15:
-                [guide_img setHidden:YES];
+                if (controllerType == X360)
+                    [guide_img setHidden:YES];
+                else if (controllerType == XONE)
+                    [right_img setHidden:YES];
                 break;
             default:
                 break;
@@ -420,66 +489,106 @@ NSString* const invert_y_str = @"Invert Y-Axis";
 {
     if ([joystick locationId] == [joysticks[[controller_combo indexOfSelectedItem]] locationId])
     {
-        // Right Stick
+        // Xbox One
+        if (stick == 0)
+        {
+            // Left Trigger
+            if (otherAxis == 0)
+            {
+                [self leftTrigger:value];
+            }
+            if (otherAxis == 1)
+            {
+                [self rightTrigger:value];
+            }
+            if (otherAxis == 2)
+            {
+                [self rightStickX:value];
+            }
+            if (otherAxis == 3)
+            {
+                [self rightStickY:value];
+            }
+        }
+        
+        // 360 - Right Stick
         if (stick == 1)
         {
             if (otherAxis == 0)
             {
-                if (abs(value) > [right_stick_deadzone intValue])
-                {
-                    double offset = 11 * value / [max_stick intValue];
-                    if ([right_invert_x state])
-                        offset = -offset;
-                    [rs_img setFrame:NSMakeRect(img_pos.origin.x + offset, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
-                }
-                else
-                {
-                    [rs_img setFrame:NSMakeRect(img_pos.origin.x, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
-                }
+                    [self rightStickX:value];
             }
             else if (otherAxis == 1)
             {
-                if (abs(value) > [right_stick_deadzone intValue])
-                {
-                    double offset = 11 * value / [max_stick intValue];
-                    if (![right_invert_y state])
-                        offset = -offset;
-                    [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y + offset, img_pos.size.width, img_pos.size.height)];
-                }
-                else
-                {
-                    [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y, img_pos.size.width, img_pos.size.height)];
-                }
+                    [self rightStickY:value];
             }
         }
-        // Triggers
+        // 360 - Triggers
         if (stick == 2)
         {
             if (otherAxis == 0)
             {
-                if (value > [trigger_deadzone intValue])
-                {
-                    // Left Trigger Light
-                    [lt_img setHidden:NO];
-                }
-                else
-                {
-                    [lt_img setHidden:YES];
-                }
+                    [self leftTrigger:value];
             }
             if (otherAxis == 1)
             {
-                if (value > [trigger_deadzone intValue])
-                {
-                    // Right Trigger Light
-                    [rt_img setHidden:NO];
-                }
-                else
-                {
-                    [rt_img setHidden:YES];
-                }
+                    [self rightTrigger:value];
             }
         }
+    }
+}
+
+- (void)rightStickX:(int)value
+{
+    if (abs(value) > [right_stick_deadzone intValue])
+    {
+        double offset = 11 * value / [max_stick intValue];
+        if ([right_invert_x state])
+            offset = -offset;
+        [rs_img setFrame:NSMakeRect(img_pos.origin.x + offset, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
+    }
+    else
+    {
+        [rs_img setFrame:NSMakeRect(img_pos.origin.x, [rs_img frame].origin.y, img_pos.size.width, img_pos.size.height)];
+    }
+}
+
+- (void)rightStickY:(int)value
+{
+    if (abs(value) > [right_stick_deadzone intValue])
+    {
+        double offset = 11 * value / [max_stick intValue];
+        if (![right_invert_y state])
+            offset = -offset;
+        [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y + offset, img_pos.size.width, img_pos.size.height)];
+    }
+    else
+    {
+        [rs_img setFrame:NSMakeRect([rs_img frame].origin.x, img_pos.origin.y, img_pos.size.width, img_pos.size.height)];
+    }
+}
+
+- (void)leftTrigger:(int)value
+{
+    if (value > [trigger_deadzone intValue])
+    {
+        [lt_img setHidden:NO];
+    }
+    else
+    {
+        [lt_img setHidden:YES];
+    }
+}
+
+- (void)rightTrigger:(int)value
+{
+    if (value > [trigger_deadzone intValue])
+    {
+        [rt_img setHidden:NO];
+    }
+    else
+    {
+        [rt_img setHidden:YES];
     }
 }
 

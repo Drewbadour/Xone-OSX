@@ -37,6 +37,12 @@ enum class
     xo_t_d,
 };
 
+typedef NS_ENUM(NSInteger, ControllerType)
+{
+    X360,
+    XONE,
+};
+
 @interface Xone_Driver_Pref_Pane : NSPreferencePane
 {
     IBOutlet NSTabViewItem* general_tab;
@@ -69,6 +75,8 @@ enum class
     IBOutlet NSImageView* rt_img;
 //    NSImageView* sync_img; // Unused
     IBOutlet NSComboBox* controller_combo;
+    
+    ControllerType controllerType;
 }
 
 - (void)mainViewDidLoad;
