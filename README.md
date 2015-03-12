@@ -39,7 +39,7 @@ There is an uninstaller included in the .dmg. Simply run it, and it will take ca
  - Recognize controller as GCController
  - Change controller input to keyboard input (setting) so as to support unsupported games
  - Compatibility with games not using Steamworks API
- - Wireless implementation is probably unlikely, since Microsoft uses a proprietary wireless implementation for the controller
+ - Wireless will work with the future release of the controller dongle.
 
 ## Developer Notes
 
