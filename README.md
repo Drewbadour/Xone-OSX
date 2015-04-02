@@ -107,3 +107,33 @@ $ sudo kextutil -t /Library/Extensions/Xone\ Driver.kext
 | Rx                | Right Stick X          |
 | Ry                | Right Stick Y          |
 | Rz                | Right Trigger          |
+
+## Button Layout to use with Unity
+
+To use the XBox One Controller in your Unity Engine project, the Layout is different.
+
+| HID Button Number | Controller Button Name |
+|:-----------------:|:----------------------:|
+| 1                 | Menu (Start)           |
+| 2                 | View (Back)            |
+| 3                 | A                      |
+| 4                 | B                      |
+| 5                 | X                      |
+| 6                 | Y                      |
+| 7                 | D-Pad Up               |
+| 8                 | D-Pad Down             |
+| 9                 | D-Pad Left             |
+| 10                | D-Pad Right            |
+| 11                | Left Bumper            |
+| 12                | Right Bumper           |
+| 13                | Left Stick             |
+| 14                | Right Stick            |
+
+| Axis ID           | Axis on Controller     |
+|:-----------------:|:----------------------:|
+| X Axis            | Left Trigger           |
+| Y Axis            | Right Trigger          |
+| 3rd Axis          | Left Stick X           |
+| 4th Axis          | Left Stick Y           |
+| 5th Axis          | Right Stick X          |
+| 6th Axis          | Right Stick Y          |
