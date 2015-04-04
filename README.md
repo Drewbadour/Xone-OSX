@@ -110,7 +110,9 @@ $ sudo kextutil -t /Library/Extensions/Xone\ Driver.kext
 
 ## Button Layout to use with Unity
 
-To use the XBox One Controller in your Unity Engine project, the Layout is different.
+
+When using the Xone-Driver-X.X.X.dmg in your Unity Engine project, the Layout is different.
+However, when using Xone-Driver-360-X.X.X.dmg, layout is identical to a 360 controller.
 
 | HID Button Number | Controller Button Name |
 |:-----------------:|:----------------------:|
