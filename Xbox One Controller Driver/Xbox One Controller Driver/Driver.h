@@ -26,7 +26,7 @@
 #define XONE_DRIVER_H
 
 // 0 = Xbox One Mode; 1 = Xbox 360 Mode (Default)
-#define X360MODE 0
+#define X360MODE 1
 
 #include <IOKit/usb/IOUSBHIDDriver.h>
 

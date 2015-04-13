@@ -44,7 +44,6 @@ OSDefineMetaClassAndStructors(com_vestigl_driver_Xone_Driver, IOUSBHIDDriver)
 // This is where the device data is stored
 #define kDriverSettingKey "DeviceData"
 
-
 #pragma mark - Wakeup Messages
 constexpr UInt8 XboxOneControllerWakeupMsg1[] = { 0x02, 0x20, 0x01, 0x1C, 0x7E, 0xED, 0x8B, 0x11, 0x0F, 0xA8, 0x00, 0x00, 0x5E, 0x04, 0xD1, 0x02, 0x01, 0x00, 0x01, 0x00, 0x17, 0x01, 0x02, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00 };
 constexpr UInt8 XboxOneControllerWakeupMsg2[] = { 0x05, 0x20, 0x00, 0x09, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x55, 0x53 };
@@ -57,6 +56,7 @@ bool XboxOneControllerDriver::init(OSDictionary* dict)
 {
     if (!super::init(dict))
     {
+        IOLog("Xbox One Controller - Init failed.\n");
         return false;
     }
     
@@ -120,6 +120,7 @@ IOReturn XboxOneControllerDriver::handleReport(IOMemoryDescriptor* descriptor, I
 
 bool XboxOneControllerDriver::handleStart(IOService *provider)
 {
+    IOLog("Xbox One Controller - handleStart\n");
     IOUSBInterface* interface = nullptr;
     IOUSBPipe* interruptPipe = nullptr;
     IOReturn ret = kIOReturnSuccess;
@@ -131,6 +132,7 @@ bool XboxOneControllerDriver::handleStart(IOService *provider)
     
     if (!super::handleStart(provider))
     {
+        IOLog("Xbox One Controller - Super handleStart\n");
         goto cleanup;
     }
     
@@ -261,24 +263,28 @@ IOReturn XboxOneControllerDriver::wakeupController()
     ret = wakeupControllerHelper(XboxOneControllerWakeupMsg1);
     if (ret != kIOReturnSuccess)
     {
+        IOLog("Xbox One Controller - wakeupController Wakeup 1 failed\n");
         goto exit;
     }
     
     ret = wakeupControllerHelper(XboxOneControllerWakeupMsg2);
     if (ret != kIOReturnSuccess)
     {
+        IOLog("Xbox One Controller - wakeupController Wakeup 2 failed\n");
         goto exit;
     }
     
     ret = wakeupControllerHelper(XboxOneControllerWakeupMsg3);
     if (ret != kIOReturnSuccess)
     {
+        IOLog("Xbox One Controller - wakeupController Wakeup 3 failed\n");
         goto exit;
     }
     
     ret = wakeupControllerHelper(XboxOneControllerWakeupMsg4);
     if (ret != kIOReturnSuccess)
     {
+        IOLog("Xbox One Controller - wakeupController Wakeup 4 failed\n");
         goto exit;
     }
     
@@ -303,6 +309,7 @@ IOReturn XboxOneControllerDriver::wakeupControllerHelper(const UInt8 *buffer)
     bytesWritten = wakeup->writeBytes(0, buffer, wakeupSize);
     if (bytesWritten != wakeupSize)
     {
+        IOLog("Xbox One Controller - wakeupControllerHelper bytesWritten != wakeupSize\n");
         ret = kIOReturnOverrun;
         goto cleanup;
     }
