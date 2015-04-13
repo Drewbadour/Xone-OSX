@@ -1,7 +1,7 @@
 Xone-OSX
 ========
 
-### Current Release: 1.0.0-rc Release Candidate (Feb. 17, 2015)
+### Current Release: 1.0.0 (Feb. 28, 2015)
 
 **NOTE: If you want to use the driver without access to the source code, [check the releases page](https://github.com/FranticRain/Xone-OSX/releases/latest).**
 
@@ -39,7 +39,7 @@ There is an uninstaller included in the .dmg. Simply run it, and it will take ca
  - Recognize controller as GCController
  - Change controller input to keyboard input (setting) so as to support unsupported games
  - Compatibility with games not using Steamworks API
- - Wireless implementation is probably unlikely, since Microsoft uses a proprietary wireless implementation for the controller
+ - Wireless will work with the future release of the controller dongle.
 
 ## Developer Notes
 
@@ -107,3 +107,35 @@ $ sudo kextutil -t /Library/Extensions/Xone\ Driver.kext
 | Rx                | Right Stick X          |
 | Ry                | Right Stick Y          |
 | Rz                | Right Trigger          |
+
+## Button Layout to use with Unity
+
+
+When using the Xone-Driver-X.X.X.dmg in your Unity Engine project, the Layout is different.
+However, when using Xone-Driver-360-X.X.X.dmg, layout is identical to a 360 controller.
+
+| HID Button Number | Controller Button Name |
+|:-----------------:|:----------------------:|
+| 1                 | Menu (Start)           |
+| 2                 | View (Back)            |
+| 3                 | A                      |
+| 4                 | B                      |
+| 5                 | X                      |
+| 6                 | Y                      |
+| 7                 | D-Pad Up               |
+| 8                 | D-Pad Down             |
+| 9                 | D-Pad Left             |
+| 10                | D-Pad Right            |
+| 11                | Left Bumper            |
+| 12                | Right Bumper           |
+| 13                | Left Stick             |
+| 14                | Right Stick            |
+
+| Axis ID           | Axis on Controller     |
+|:-----------------:|:----------------------:|
+| X Axis            | Left Trigger           |
+| Y Axis            | Right Trigger          |
+| 3rd Axis          | Left Stick X           |
+| 4th Axis          | Left Stick Y           |
+| 5th Axis          | Right Stick X          |
+| 6th Axis          | Right Stick Y          |
