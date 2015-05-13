@@ -19,7 +19,7 @@ This is a kext and preference pane that allows users to use the Xbox One control
 
 ## Uninstall
 
-There is an uninstaller included in the .dmg. Simply run it, and it will take care of the rest!
+There is an uninstaller included in the download. If you do not have the original version of your driver, download a new one. When you open the downloaded file, the uninstall.command will be located in the top left of the new window that opens. Simply run it, and it will take care of the rest!
 
 ## Troubleshooting
 #### My controller isn't recognized / The lights just flash
