@@ -335,7 +335,6 @@ cleanup:
 void XboxOneControllerDriver::applyUserSettings(void* reportVoid)
 {
     XONE_IN_REPORT* report = (XONE_IN_REPORT*)reportVoid;
-    
     // Make sure to invert what needs inverting
     if (xoneInvertLeftX)
         report->leftStickX = ~report->leftStickX;
@@ -368,6 +367,18 @@ void XboxOneControllerDriver::applyUserSettings(void* reportVoid)
         SInt16 const absMaskY = report->rightStickY >> (sizeof(SInt16) * 8 - 1);
         if (((report->rightStickY + absMaskY) ^ absMaskY) < xoneRightDead)
             report->rightStickY = 0;
+    }
+    
+    // Flip the sticks for lefties.
+    if (southpaw)
+    {
+        SInt16 holdLeftX, holdLeftY;
+        holdLeftX = report->leftStickX;
+        holdLeftY = report->leftStickY;
+        report->leftStickX = report->rightStickX;
+        report->leftStickY = report->rightStickY;
+        report->rightStickX = holdLeftX;
+        report->rightStickY = holdLeftY;
     }
     
     // Apply trigger deadzones
@@ -420,8 +431,11 @@ void XboxOneControllerDriver::readSettings()
     if (data_dictionary)
     {
         value = OSDynamicCast(OSBoolean, data_dictionary->getObject("l_inv_x"));
+        
         if (value)
+        {
             xoneInvertLeftX = value->getValue();
+        }
         
         value = OSDynamicCast(OSBoolean, data_dictionary->getObject("l_inv_y"));
         if (value)
@@ -434,6 +448,10 @@ void XboxOneControllerDriver::readSettings()
         value = OSDynamicCast(OSBoolean, data_dictionary->getObject("r_inv_y"));
         if (value)
             xoneInvertRightY = value->getValue();
+        
+        value = OSDynamicCast(OSBoolean, data_dictionary->getObject("southpaw"));
+        if (value)
+            southpaw = value->getValue();
         
         number = OSDynamicCast(OSNumber, data_dictionary->getObject("l_stick_d"));
         if (number)

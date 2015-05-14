@@ -37,6 +37,7 @@ class com_vestigl_driver_Xone_Driver : public IOUSBHIDDriver
 private:
     bool xoneInvertLeftX, xoneInvertLeftY;
     bool xoneInvertRightX, xoneInvertRightY;
+    bool southpaw;
     SInt16 xoneLeftDead, xoneRightDead;
     UInt16 xoneTriggerDead;
     

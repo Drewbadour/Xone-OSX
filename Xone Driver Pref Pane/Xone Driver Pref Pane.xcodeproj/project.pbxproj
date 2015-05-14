@@ -98,9 +98,8 @@
 		6216F20A19D285F200161299 = {
 			isa = PBXGroup;
 			children = (
-				62E8B2D219D70D7D00501CDB /* DDHidLib.framework */,
-				62E8B2C819D6381C00501CDB /* PreferencePanes.framework */,
 				6216F21619D285F200161299 /* Xone Driver Pref Pane */,
+				97594BA91B03B0E700C35A19 /* Frameworks */,
 				6216F21519D285F200161299 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,6 +158,15 @@
 				62E8B32019D903F900501CDB /* Controller_Y.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		97594BA91B03B0E700C35A19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62E8B2D219D70D7D00501CDB /* DDHidLib.framework */,
+				62E8B2C819D6381C00501CDB /* PreferencePanes.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +367,7 @@
 		6216F22519D285F200161299 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,6 +383,7 @@
 		6216F22619D285F200161299 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
