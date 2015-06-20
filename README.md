@@ -1,7 +1,7 @@
 Xone-OSX
 ========
 
-### Current Release: 1.0.3 (May. 13, 2015)
+### Current Release: 1.0.3 (June. 20, 2015)
 
 **NOTE: If you want to use the driver without access to the source code, [check the releases page](https://github.com/FranticRain/Xone-OSX/releases/latest).**
 

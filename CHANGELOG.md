@@ -1,3 +1,12 @@
+## 1.0.4 (2015-06-20)
+
+Builds 1.0.1, 1.0.2, and 1.0.3 were unsuccessful attempts to add third party controller support.
+
+Compatibility Added: 
+
+ - Xbox One Controller with 3.5mm jack. XboxOneController2015
+ - Old version of controller renamed to XboxOneController2013
+
 ## 1.0.0 (2015-02-17)
 
 Features:
