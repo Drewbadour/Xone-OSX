@@ -29,7 +29,7 @@ Check and make sure your controller shows up here:
 <img src="http://i.imgur.com/0lKtI7b.png" width="575" height="421" alt="Yosemite kext signature alert">
 
 #### My controller is in that menu, but has a different Product and or Vendor ID
-First, make sure you have the latest version of the driver. If you are: create an issue that lists these two values. I will add it in as soon as possible.
+If it is a Microsoft controller, post your Product and Vendor IDs in an issue, and I'll look into it. If you are using a third party controller, uninstall my driver and use [this driver instead.](https://dl.dropboxusercontent.com/u/14890209/Install360Controller0.15Preview7.pkg)
 
 #### My controller is in that menu, but it still doesn't work.
 First, make sure you have the latest version of the driver. If you are: check Console.app for any sort of errors that the driver may mention, and make sure to post any of it in an issue.
