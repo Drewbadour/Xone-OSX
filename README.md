@@ -25,7 +25,7 @@ There is an uninstaller included in the download. If you do not have the origina
 #### My controller isn't recognized / The lights just flash
 Check and make sure your controller shows up here:
 
-<img src="http://i.imgur.com/yAyAsIj.png" width="427" height="267" alt="Yosemite kext signature alert">
+<img src="http://i.imgur.com/NOcAnRO.png" width="427" height="267" alt="Yosemite kext signature alert">
 <img src="http://i.imgur.com/0lKtI7b.png" width="575" height="421" alt="Yosemite kext signature alert">
 
 #### My controller is in that menu, but has a different Product and or Vendor ID
