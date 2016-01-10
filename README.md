@@ -3,6 +3,7 @@ Xone-OSX
 
 ## THIS DRIVER IS DEPRECATED
 #### PLEASE USE [THIS DRIVER](https://github.com/360Controller/360Controller/releases) INSTEAD
+#### MAKE SURE TO UNINSTALL THIS DRIVER USING THE UNINSTALL.COMMAND FILE FOUND IN THE DOWNLOAD OF THIS DRIVER
 Unfortunately, this driver only works with the original Xbox One controller for some reason, so I've moved all of my code to a more robust driver that supports later Xbox One controllers in addition to 3rd party controllers. Check it out! If you need help with Xbox One controller related issues, I'm always watching that repository for stuff that I can help out with.
 
 ### Current Release: 1.0.4 (June. 20, 2015)
